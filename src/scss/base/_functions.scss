@@ -1,0 +1,26 @@
+/// Functions
+
+// Breakpoint
+@function bp($value) {
+	@return map-get($breakpoints, $value);
+}
+
+// Margin
+@function mg($value) {
+	@return map-get($margin, $value);
+}
+
+// Padding
+@function pd($value) {
+	@return map-get($padding, $value);
+}
+
+// Font weight
+@function fw($value: 'normal') {
+	@return map-get($font-weight, $value);
+}
+
+// Color palette modifiers
+@function palette($color, $shade: 'base') {
+	@return map-get(map-get($palettes, $color), $shade);
+}

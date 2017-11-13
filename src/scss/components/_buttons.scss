@@ -1,0 +1,224 @@
+/// Buttons
+
+.btn {
+  display: inline-block;
+  width: auto;
+  margin: 10px 0;
+  padding: 10px;
+  font-size: 16px;
+  text-align: center;
+  color: #ffffff;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+
+  &-black {
+      background-color: #000000;
+  }
+}
+
+.btn-block {
+  display: block;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 10px 0;
+  z-index: 1000;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}
+
+.btn-config {
+  display: inline-block;
+  height: 120px;
+  width: 120px;
+  border: 8px solid #ffffff;
+  border-radius: 50%;
+  font-size: 1.2em;
+  text-align: center;
+  color: #ffffff;
+  opacity: 0;
+  transition: opacity .3s linear;
+
+  &:hover {
+    opacity: .7;
+  }
+}
+
+/* Outline buttons */
+
+.btn-outline {
+  display: inline-block;
+  padding: 10px 15px;
+  font-family: "Roboto Light", Arial, Helvetica, sans-serif;
+  font-weight: 100;
+  font-size: 12px;
+  text-align: center;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* 3D buttons */
+
+.btn-3D {
+  display: inline-block;
+  width: auto;
+  padding: 5px 10px;
+  margin: 5px 0;
+  border: 1px solid rgba(0,0,0,0.15);
+  border-radius: 4px;
+  font-family: "Roboto Condensed Light", Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  color: #ffffff;
+  text-align: center;
+  background: #bbbbbb;
+  transition: all 0.3s ease-out;
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.5),
+    0 2px 2px rgba(0,0,0,0.3),
+    0 0 4px 1px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.btn-3D-block {
+  width: 100%;
+}
+
+.btn-3D-large {
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-size: 28px;
+}
+
+.btn-3D-green {
+  background-color: #00bb5d;
+}
+
+.btn-3D:hover {
+  background-color: #00bb5d;
+}
+
+/* Circle buttons */
+
+.btn-circle-wrap {
+  display: inline-block;
+}
+
+.btn-circle {
+  display: table;
+  width: 36px;
+  height: 36px;
+  border: 1px solid #ffffff;
+  border-radius: 50%;
+  opacity: 1;
+  transition: background-color .3s ease;
+  background-color: rgba(0,0,0,0);
+  outline: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #ffffff;
+  }
+
+  .bars {
+    display: table-cell;
+    vertical-align: middle;
+
+    span {
+      display: block;
+      width: 50%;
+      height: 1px;
+      margin: 0 auto;
+      transition: background-color .3s linear;
+      background-color: #ffffff;
+
+      &:hover {
+        background-color: #000000;
+      }
+    }
+  }
+}
+
+/* Circle button plus */
+
+.btn-circle-plus {
+  .bars {
+
+    span:first-child {
+      margin-top: 0;
+      transform: rotate(90deg);
+    }
+
+    span:last-child {
+      margin-top: -1px;
+    }
+  }
+}
+
+/* Circle button cross */
+
+.btn-circle-cross {
+  .bars {
+
+    span:first-child {
+      margin-top: 0;
+      transform: rotate(45deg);
+    }
+
+    span:last-child {
+      margin-top: -1px;
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+/* Circle button forward */
+
+.btn-circle-forward {
+  .bars {
+
+    span {
+      width: 40%;
+    }
+
+    span:first-child {
+      margin-top: 0;
+      transform: rotate(-30deg);
+    }
+
+    span:last-child {
+      margin-top: -6px;
+      transform: rotate(30deg);
+    }
+  }
+}
+
+/* Circle button target */
+
+.btn-circle-target {
+  background-color: red;
+
+  .bars {
+
+    div {
+      display: block;
+      margin: 0 auto;
+      width: 50%;
+      height: 50%;
+      border: 1px solid #ffffff;
+      border-radius: 50%;
+    }
+  }
+}
