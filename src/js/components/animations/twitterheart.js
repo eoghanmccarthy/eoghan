@@ -7,51 +7,61 @@ import ContentSidebar from '../contentsidebar'
 import * as animationData from './data/twitterheart.json'
 
 export default class TwiiterHeart extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            isStopped: false,
+            speed: 1
+        };
+    }
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      isStopped: false
-    };
-  }
+    handleClick() {
+        const { isStopped } = this.state;
+        this.setState({
+            isStopped: !isStopped
+        })
+    }
 
-  render() {
+    render() {
 
-    const defaultOptions = {
-      loop: true,
-      autoplay: false,
-      animationData: animationData,
-      rendererSettings: {
-        className: 'svg',
-        viewBoxOnly: true
-      }
-    };
+        const { isStopped, speed } = this.state;
 
-		return [
-			<ContentMain>
-				<div className="content-column">
+        const defaultOptions = {
+            loop: true,
+            autoplay: true,
+            animationData: animationData,
+            rendererSettings: {
+                className: 'svg',
+                viewBoxOnly: true
+            }
+        };
 
-          {/* <button
-	          className="btn-circle"
-	          onClick={() => this.setState({isStopped: !this.state.isStopped})}
-	        /> */}
+        return [
+            <ContentMain>
+                <div className="content-column">
 
-          <div onClick={() => this.setState({isStopped: !this.state.isStopped})}>
+                    {/* <button
+                        className="btn-circle"
+                        onClick={() => this.setState({isStopped: !this.state.isStopped})}
+                    /> */}
 
-            <Lottie options={defaultOptions}
-              height={200}
-              width={200}
-              isStopped={this.state.isStopped}
-  					/>
+                    <div onClick={ this.handleClick.bind(this) }>
 
-          </div>
+                        <Lottie options={defaultOptions}
+                            height={200}
+                            width={200}
+                            speed={ speed }
+                            isStopped={ isStopped }
+                        />
 
-				</div>
-      </ContentMain>,
-      <ContentSidebar>
-				<h3>Lottie</h3>
-				<p>Looping animation with start/stop button.</p>
-			</ContentSidebar>
-		]
-  }
+                    </div>
+                </div>
+            </ContentMain>,
+            <ContentSidebar>
+                <h3>Lottie</h3>
+                <p>Looping animation with start/stop button.</p>
+            </ContentSidebar>
+        ]
+    }
 }

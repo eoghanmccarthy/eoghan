@@ -7,40 +7,51 @@ import ContentSidebar from '../contentsidebar'
 import * as animationData from './data/loadingrefresh.json'
 
 export default class LoadingRefresh extends Component {
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            speed: undefined
+        };
+    }
 
-  componentDidMount = () => {
-    let anim = this.refs.loadingRefreshRef.anim;
-    anim.setSpeed(2);
-  }
+    componentDidMount = () => {
+        this.setState({
+            speed: 5
+        })
+    }
 
-  render() {
+    render() {
 
-    const defaultOptions = {
-      loop: true,
-      autoplay: true,
-      animationData: animationData,
-      rendererSettings: {
-        className: 'svg',
-        viewBoxOnly: true
-      }
-    };
+        const { speed } = this.state;
 
-		return [
-			<ContentMain>
-				<div className="content-column">
+        const defaultOptions = {
+            loop: true,
+            autoplay: true,
+            animationData: animationData,
+            rendererSettings: {
+                className: 'svg',
+                viewBoxOnly: true
+            }
+        };
 
-          <Lottie options={defaultOptions}
-            ref={'loadingRefreshRef'}
-            height={200}
-            width={200}
-					/>
+        return [
+            <ContentMain>
+                <div className="content-column">
 
-				</div>
-      </ContentMain>,
-      <ContentSidebar>
-				<h3>Lottie</h3>
-				<p>Looping animation with custom speed setting.</p><p><a href="https://www.lottiefiles.com/126-loading-refresh" target="_blank">animation</a></p>
-			</ContentSidebar>
-		]
-  }
+                    <Lottie options={defaultOptions}
+                        ref={'loadingRefreshRef'}
+                        height={ 200 }
+                        width={ 200 }
+                        speed={ speed }
+                    />
+
+                </div>
+            </ContentMain>,
+            <ContentSidebar>
+                <h3>Lottie</h3>
+                <p>Looping animation with custom speed setting.</p><p><a href="https://www.lottiefiles.com/126-loading-refresh" target="_blank">animation</a></p>
+            </ContentSidebar>
+        ]
+    }
 }

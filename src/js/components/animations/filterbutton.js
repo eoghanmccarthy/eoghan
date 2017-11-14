@@ -7,69 +7,70 @@ import ContentSidebar from '../contentsidebar'
 import * as animationData from './data/filterbutton.json'
 
 export default class FilterButton extends Component {
-
-  constructor(props) {
-    super(props);
-    this.state = {
-      filtersActive: false
-    };
-  }
-
-  handleToggleFilters() {
-    let anim = this.refs.loadingRefreshRef.anim;
-    if(this.state.filtersActive === false) {
-      this.setState({
-        filtersActive: true
-      })
-      anim.playSegments([0, 75], true);
-    } else {
-      this.setState({
-        filtersActive: false
-      })
-      anim.playSegments([76, 150], true);
+    
+    constructor(props) {
+        super(props);
+        this.state = {
+            isStopped: true,
+            speed: 1,
+            active: false
+        };
     }
-  }
+    
+    handleClick() {
+        const { isStopped, active } = this.state;
+        const anim = this.refs.filterButtonRef.anim;
+        if(!active) {
+            anim.playSegments([0, 75], true);
+        } else {
+            anim.playSegments([76, 150], true);
+        }
+        this.setState({
+            isStopped: false,
+            active: !active
+        })
+    }
+    
+    render() {
 
-  render() {
+        const { isStopped, speed } = this.state;
 
-    const defaultOptions = {
-      loop: false,
-      autoplay: false,
-      animationData: animationData,
-      // rendererSettings: {
-      //   preserveAspectRatio: xMidYMid slice
-      // }
-    };
+        const defaultOptions = {
+            loop: false,
+            autoplay: false,
+            animationData: animationData,
+            rendererSettings: {
+                className: 'svg',
+                viewBoxOnly: true
+            }
+        };
+    
+        return [
+            <ContentMain>
+                <div className="content-column">
 
-		return [
-			<ContentMain>
-				<div className="content-column">
+                    {/* <button
+                        className="btn-circle"
+                        onClick={this.handleToggle.bind(this)}
+                    /> */}
 
-          <button
-	          className="btn-circle"
-	          onClick={this.handleToggleFilters.bind(this)}
-	        />
+                    <div onClick={ this.handleClick.bind(this) }>
 
-          <Lottie options={defaultOptions}
-            ref={'loadingRefreshRef'}
-            height={400}
-            width={400}
-            // eventListeners={
-            //   [
-            //     {
-            //       eventName: 'complete',
-            //       callback: this.handleOnComplete.bind(this)
-            //     }
-            //   ]
-            // }
-					/>
+                        <Lottie options={defaultOptions}
+                            ref={'filterButtonRef'}
+                            height={ 200 }
+                            width={ 200 }
+                            isStopped={ isStopped }
+                            speed={ speed }
+                        />
 
-				</div>
-      </ContentMain>,
-			<ContentSidebar>
-					<h3>Lottie</h3>
-					<p>Toggle between two segments and force the segment right away.</p><p><a href="https://www.lottiefiles.com/344-filter-button" target="_blank">animation</a></p>
-			</ContentSidebar>
-		]
-  }
+                    </div>
+                </div>
+            </ContentMain>,
+            <ContentSidebar>
+                <h3>Lottie</h3>
+                <p>Toggle between two segments and force the segment right away.</p><p><a href="https://www.lottiefiles.com/344-filter-button" target="_blank">animation</a></p>
+            </ContentSidebar>
+        ]
+    }
 }
