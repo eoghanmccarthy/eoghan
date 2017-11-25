@@ -1,0 +1,59 @@
+/// Config
+
+.slideshow-config {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 100px auto 100px;
+  width: 100%;
+
+  .config-library {
+    grid-row: auto;
+    padding: pd(md) 0;
+
+    .library-items {
+      display: flex;
+      justify-content: center;
+      flex-flow: row wrap;
+      width: 100%;
+    }
+  }
+
+  .config-controls {
+    grid-row: auto;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: pd(md) 0;
+
+    .btn-clear-selection {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .btn-add-library-item {
+      form {
+        flex-flow: row nowrap;
+        & > div {
+          display: inline-block;
+        }
+      }
+      label {
+        margin-right: 0;
+      }
+      .btn-circle {
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .hidden-form {
+    position: absolute;
+    width: 0.1px !important;
+    height: 0.1px !important;
+    opacity: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+}
