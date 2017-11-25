@@ -1,0 +1,24 @@
+{
+  "data": [
+    {
+      "src": "assets/media/AGAVE.mp4",
+      "selected": false
+    },
+    {
+      "src": "assets/media/CARROT.mp4",
+      "selected": false
+    },
+    {
+      "src": "assets/media/COCONUT.mp4",
+      "selected": false
+    },
+    {
+      "src": "assets/media/MANGO.mp4",
+      "selected": false
+    },
+    {
+      "src": "assets/media/PINEAPPLE.mp4",
+      "selected": false
+    }
+  ]
+}
