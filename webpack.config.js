@@ -1,71 +1,63 @@
-const path = require('path');
-const webpack = require('webpack');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path");
+const webpack = require("webpack");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
 module.exports = {
-	entry: [
-    './src/js/index.js',
-    './src/scss/main.scss'
-  ],
-	devServer : {
-    publicPath: '/assets/',
-    contentBase: path.join(__dirname, '/dist'),
+  entry: ["./src/js/index.js", "./src/scss/main.scss"],
+  devServer: {
+    publicPath: "/",
+    contentBase: path.join(__dirname, "/dist"),
     watchContentBase: true,
     historyApiFallback: true
   },
-	output: {
-    path: path.join(__dirname, '/dist'),
-    publicPath: '/asset/',
-    filename: 'bundle.js'
+  output: {
+    path: path.join(__dirname, "/dist"),
+    publicPath: "/",
+    filename: "bundle.js"
   },
-	resolve: {
-		extensions: ['.js', '.jsx']
-	},
-	module: {
+  resolve: {
+    extensions: [".js", ".jsx"]
+  },
+  module: {
     rules: [
       {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: 'babel-loader',
+          loader: "babel-loader",
           options: {
             plugins: [
-              'transform-class-properties',
-              'transform-es2015-classes',
-              'transform-object-rest-spread'
+              "transform-class-properties",
+              "transform-es2015-classes",
+              "transform-object-rest-spread"
             ]
           }
         }
       },
-			{
+      {
         test: /\.css$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
-          use: [
-            'style-loader',
-            'css-loader'
-          ]
+          use: ["style-loader", "css-loader"]
         })
       },
-			{
+      {
         test: /\.scss$/,
         exclude: /node_modules/,
         use: ExtractTextPlugin.extract({
           use: [
-            'css-loader',
+            "css-loader",
             {
-							loader: 'postcss-loader',
+              loader: "postcss-loader",
               options: {
-                ident: 'postcss',
+                ident: "postcss",
                 config: {
-                  path: './postcss.config.js'
+                  path: "./postcss.config.js"
                 },
-                plugins: (loader) => [
-                  require('autoprefixer')()
-                ]
+                plugins: loader => [require("autoprefixer")()]
               }
             },
-            'sass-loader'
+            "sass-loader"
           ]
         })
       },
@@ -73,18 +65,18 @@ module.exports = {
         test: /\.(png|jpg|gif)$/,
         use: [
           {
-            loader: 'file-loader',
+            loader: "file-loader",
             options: {
-              outputPath: './dist/assets/media/'
+              outputPath: "./dist/assets/media/"
             }
           }
         ]
       }
     ]
   },
-	plugins: [
+  plugins: [
     new ExtractTextPlugin({
-      filename: 'main.css',
+      filename: "main.css",
       disable: false,
       allChunks: true
     })
