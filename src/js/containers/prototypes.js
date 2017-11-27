@@ -1,10 +1,11 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
-import ContentList from "../components/contentlist";
+import ContentList from "../components/contentlist"
 
-import StaggeredTransitionOnMount from "../components/prototypes/staggeredTransitionOnMount";
-import TransitionOnMount from "../components/prototypes/transitionOnMount";
-import SlideShow from "../components/prototypes/slideshow/config";
+import StaggeredTransitionOnMount from "../components/prototypes/staggeredTransitionOnMount"
+import TransitionOnMount from "../components/prototypes/transitionOnMount"
+import AudioPlayer from "../components/prototypes/audioplayer/audioplayer"
+import SlideShow from "../components/prototypes/slideshow/config"
 
 export default class Transitions extends Component {
     render() {
@@ -27,11 +28,12 @@ export default class Transitions extends Component {
                     </ContentList>
                 </div>
                 <div className="grid-main">
+                    <AudioPlayer />
                     <SlideShow />
                     <StaggeredTransitionOnMount />
                     <TransitionOnMount />
                 </div>
             </div>
-        );
+        )
     }
 }

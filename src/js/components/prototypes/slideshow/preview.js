@@ -1,16 +1,16 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import { toggleGlobalHeader } from "../../../actions/global";
-import { togglePreview } from "../../../actions/slideshow";
+import React, { Component } from "react"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import { toggleGlobalHeader } from "../../../actions/global"
+import { togglePreview } from "../../../actions/slideshow"
 
-import Modal from "../../modal";
+import Modal from "../../modal"
 
 class Preview extends Component {
     handleClick = () => {
-        this.props.toggleGlobalHeader();
-        this.props.togglePreview();
-    };
+        this.props.toggleGlobalHeader()
+        this.props.togglePreview()
+    }
 
     render() {
         return (
@@ -24,18 +24,18 @@ class Preview extends Component {
                     </div>
                 </div>
             </Modal>
-        );
+        )
     }
 }
 
 const mapStateToProps = state => {
     return {
         preview: state.prototypes.slideshow.preview
-    };
-};
+    }
+}
 
 const mapDispatchToProps = dispatch => {
-    return bindActionCreators({ togglePreview, toggleGlobalHeader }, dispatch);
-};
+    return bindActionCreators({ togglePreview, toggleGlobalHeader }, dispatch)
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Preview);
+export default connect(mapStateToProps, mapDispatchToProps)(Preview)

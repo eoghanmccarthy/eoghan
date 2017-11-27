@@ -72,48 +72,66 @@
     }
 }
 // Circle Button Plus
-.btn-circle-plus .bars span:first-child {
-    margin-top: 0;
-    transform: rotate(90deg);
-}
-.btn-circle-plus .bars span:last-child {
-    margin-top: -1px;
+.btn-circle-plus {
+    .bars {
+        span:first-child {
+            margin-top: 0;
+            transform: rotate(90deg);
+        }
+        span:last-child {
+            margin-top: -1px;
+        }
+    }
 }
 // Circle Button Minus
-.btn-circle-minus .bars span {
-    margin-top: 0;
+.btn-circle-minus {
+    .bars {
+        span {
+            margin-top: 0;
+        }
+    }
 }
 // Circle Button Cross
-.btn-circle-cross .bars span:first-child {
-    margin-top: 0;
-    transform: rotate(45deg);
-}
-.btn-circle-cross .bars span:last-child {
-    margin-top: -1px;
-    transform: rotate(-45deg);
+.btn-circle-cross {
+    .bars {
+        span:first-child {
+            margin-top: 0;
+            transform: rotate(45deg);
+        }
+        span:last-child {
+            margin-top: -1px;
+            transform: rotate(-45deg);
+        }
+    }
 }
 // Circle Button Forward
-.btn-circle-forward .bars span {
-    width: 40%;
-}
-.btn-circle-forward .bars span:first-child {
-    margin-top: 0;
-    transform: rotate(-30deg);
-}
-.btn-circle-forward .bars span:last-child {
-    margin-top: -6px;
-    transform: rotate(30deg);
+.btn-circle-forward {
+    .bars {
+        span {
+            width: 40%;
+        }
+        span:first-child {
+            margin-top: 0;
+            transform: rotate(-30deg);
+        }
+        span:last-child {
+            margin-top: -6px;
+            transform: rotate(30deg);
+        }
+    }
 }
 // Circle Button Target
 .btn-circle-target {
     background-color: $red;
-    .bars div {
-        display: block;
-        margin: 0 auto;
-        width: 50%;
-        height: 50%;
-        border: 1px solid $white;
-        border-radius: 50%;
+    .bars {
+        div {
+            display: block;
+            margin: 0 auto;
+            width: 50%;
+            height: 50%;
+            border: 1px solid $white;
+            border-radius: 50%;
+        }
     }
 }
 // Trigger Action

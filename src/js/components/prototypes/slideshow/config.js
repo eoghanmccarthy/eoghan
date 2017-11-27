@@ -1,83 +1,83 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as globalActions from "../../../actions/global";
-import * as slideShowActions from "../../../actions/slideshow";
+import React, { Component } from "react"
+import { Link } from "react-router-dom"
+import { withRouter } from "react-router"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import * as globalActions from "../../../actions/global"
+import * as slideShowActions from "../../../actions/slideshow"
 
-import ReactFileReader from "react-file-reader";
+import ReactFileReader from "react-file-reader"
 
-import ContentMain from "../../contentmain";
-import ContentSidebar from "../../contentsidebar";
-import Preview from "./preview";
-import Viewer from "./viewer";
+import ContentMain from "../../contentmain"
+import ContentSidebar from "../../contentsidebar"
+import Preview from "./preview"
+import Viewer from "./viewer"
 
-import libraryData from "json-loader!../data/imagelibrary.json";
-// import libraryData from "json-loader!../data/videolibrary.json";
+import { LibraryData } from "./data/imagelibrary"
+// import { LibraryData } from "./data/videolibrary"
 
 class Config extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             previewSrc: "",
             selectedFile: "",
             viewerIsActive: false
-        };
+        }
     }
 
     handleLoadLibrary = () => {
-        this.props.loadLibrary(libraryData.data);
+        this.props.loadLibrary(LibraryData)
         this.props.library.map((item, index) => {
-            this[`mediaRef${index}`].load();
-        });
-        this.props.clearPlaylist();
-    };
+            this[`mediaRef${index}`].load()
+        })
+        this.props.clearPlaylist()
+    }
 
     handleDeleteLibraryItem = index => {
-        this.props.deleteLibraryItem(this.props.library[index].src);
-        this.props.removePlaylistItem(this.props.library[index].src);
+        this.props.deleteLibraryItem(this.props.library[index].src)
+        this.props.removePlaylistItem(this.props.library[index].src)
         this.props.library.map((item, index) => {
-            this[`mediaRef${index}`].load();
-        });
-    };
+            this[`mediaRef${index}`].load()
+        })
+    }
 
     handleAddPlaylistItem = index => {
-        this.props.addPlaylistItem(this.props.library[index].src);
-        this.props.setItemStatusSelected(this.props.library[index].src);
-    };
+        this.props.addPlaylistItem(this.props.library[index].src)
+        this.props.setItemStatusSelected(this.props.library[index].src)
+    }
 
     handleRemovePlaylistItem = index => {
-        this.props.removePlaylistItem(this.props.library[index].src);
-        this.props.setItemStatusUnselected(this.props.library[index].src);
-    };
+        this.props.removePlaylistItem(this.props.library[index].src)
+        this.props.setItemStatusUnselected(this.props.library[index].src)
+    }
 
     handleClearPlaylist = () => {
-        this.props.clearPlaylist();
-        this.props.setAllStatusUnselected();
-    };
+        this.props.clearPlaylist()
+        this.props.setAllStatusUnselected()
+    }
 
     handleTogglePreview = index => {
-        this.props.toggleGlobalHeader();
-        this.props.togglePreview();
+        this.props.toggleGlobalHeader()
+        this.props.togglePreview()
         this.setState({
             previewSrc: this.props.library[index].src
-        });
-    };
+        })
+    }
 
     handleFileSelectChange = files => {
         this.setState({
             selectedFile: files.base64
-        });
-        this.handleFileSubmit();
-    };
+        })
+        this.handleFileSubmit()
+    }
 
     handleFileSubmit = () => {
-        this.props.addLibraryItem(this.state.selectedFile);
+        this.props.addLibraryItem(this.state.selectedFile)
         this.setState({
             selectedFile: ""
-        });
-    };
+        })
+    }
 
     //   handleFileSubmit = event => {
     //     this.props.addLibraryItem(this.state.selectedFile);
@@ -88,9 +88,9 @@ class Config extends Component {
     //   };
 
     handleToggleViewer = () => {
-        this.props.toggleGlobalHeader();
-        this.props.toggleViewer();
-    };
+        this.props.toggleGlobalHeader()
+        this.props.toggleViewer()
+    }
 
     render() {
         const {
@@ -100,7 +100,7 @@ class Config extends Component {
             togglePreview,
             clearPlaylist,
             viewer
-        } = this.props;
+        } = this.props
 
         const libraryItems = library.map((item, index) => (
             <div className="card-container" key={index}>
@@ -183,7 +183,7 @@ class Config extends Component {
                     </div>
                 </div>
             </div>
-        ));
+        ))
 
         return [
             <ContentMain>
@@ -295,7 +295,7 @@ class Config extends Component {
                     of images. Once configured, click to launch :)
                 </p>
             </ContentSidebar>
-        ];
+        ]
     }
 }
 
@@ -305,14 +305,14 @@ const mapStateToProps = state => {
         playlist: state.prototypes.slideshow.playlist,
         preview: state.prototypes.slideshow.preview,
         viewer: state.prototypes.slideshow.viewer
-    };
-};
+    }
+}
 
 const mapDispatchToProps = dispatch => {
     return bindActionCreators(
         Object.assign({}, globalActions, slideShowActions),
         dispatch
-    );
-};
+    )
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(Config);
+export default connect(mapStateToProps, mapDispatchToProps)(Config)
