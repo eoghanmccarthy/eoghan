@@ -1,31 +1,31 @@
-import React, { Component } from "react";
-import { StaggeredMotion, spring } from "react-motion";
+import React, { Component } from "react"
+import { StaggeredMotion, spring } from "react-motion"
 
-import ContentMain from "../contentmain";
-import ContentSidebar from "../contentsidebar";
+import ContentMain from "../contentmain"
+import ContentSidebar from "../contentsidebar"
 
-import Logo from "../logo";
+import Circle from "../assets/shapes/circle"
 
-const startY = 100;
-const startOpacity = 0;
+const startY = 100
+const startOpacity = 0
 
 // Lower damping and stiffness here will exaggerate the
 // Start of the sequence of animations
-const initialStiffness = 400;
-const initialDamping = 60;
+const initialStiffness = 400
+const initialDamping = 60
 
 // Lower damping and stiffness here will exaggerate the
 // End of the sequence of animations
-const finalStiffness = 400;
-const finalDamping = 60;
+const finalStiffness = 400
+const finalDamping = 60
 /* ---------------------------------- */
 
-const library = [1, 2, 3, 4, 5];
+const library = [1, 2, 3, 4, 5]
 
 export default class StaggeredTransitionOnMount extends Component {
     getDefaultStyles = () => {
-        return library.map(todo => ({ y: startY, o: startOpacity }));
-    };
+        return library.map(todo => ({ y: startY, o: startOpacity }))
+    }
 
     render() {
         return [
@@ -50,7 +50,7 @@ export default class StaggeredTransitionOnMount extends Component {
                                           damping: finalDamping
                                       }),
                                       o: spring(prevStyles[i - 1].o)
-                                  };
+                                  }
                         })
                     }
                 >
@@ -64,9 +64,9 @@ export default class StaggeredTransitionOnMount extends Component {
                                         style.y
                                     }px, 0)`,
                                     opacity: style.o
-                                };
+                                }
 
-                                return <Logo key={index} style={itemStyles} />;
+                                return <Circle key={index} style={itemStyles} />
                             })}
                         </div>
                     )}
@@ -88,6 +88,6 @@ export default class StaggeredTransitionOnMount extends Component {
                     </a>
                 </p>
             </ContentSidebar>
-        ];
+        ]
     }
 }

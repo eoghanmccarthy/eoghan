@@ -6,7 +6,7 @@ class Navigation extends Component {
     render() {
         return (
             <div>
-                {this.props.globalHeaderIsActive && (
+                {this.props.isActive && (
                     <header className="global-header">
                         <img
                             className="omm-logo"
@@ -29,7 +29,7 @@ class Navigation extends Component {
 
 const mapStateToProps = state => {
     return {
-        globalHeaderIsActive: state.global.globalHeaderIsActive
+        isActive: state.globalHeader.isActive
     }
 }
 

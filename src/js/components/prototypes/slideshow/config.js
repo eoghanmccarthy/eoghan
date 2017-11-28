@@ -28,18 +28,18 @@ class Config extends Component {
 
     handleLoadLibrary = () => {
         this.props.loadLibrary(LibraryData)
-        this.props.library.map((item, index) => {
-            this[`mediaRef${index}`].load()
-        })
         this.props.clearPlaylist()
+        // this.props.library.map((item, index) => {
+        //     this[`mediaRef${index}`].load()
+        // })
     }
 
     handleDeleteLibraryItem = index => {
         this.props.deleteLibraryItem(this.props.library[index].src)
         this.props.removePlaylistItem(this.props.library[index].src)
-        this.props.library.map((item, index) => {
-            this[`mediaRef${index}`].load()
-        })
+        // this.props.library.map((item, index) => {
+        //     this[`mediaRef${index}`].load()
+        // })
     }
 
     handleAddPlaylistItem = index => {
@@ -220,7 +220,7 @@ class Config extends Component {
                                                 this.handleFileSelectChange
                                             }
                                         >
-                                            <div className="btn btn-circle btn-circle-plus">
+                                            <div className="btn btn-circle btn-default btn-circle-plus">
                                                 <div className="bars">
                                                     <span />
                                                     <span />

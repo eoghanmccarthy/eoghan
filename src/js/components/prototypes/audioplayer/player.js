@@ -11,7 +11,8 @@ class Player extends Component {
         super(props)
         this.state = {
             isPlaying: false,
-            isPaused: true
+            isPaused: true,
+            duration: 0
         }
     }
 
@@ -28,12 +29,19 @@ class Player extends Component {
                 .then(_ => {
                     mediaRef.load()
                     mediaRef.play()
+                    mediaRef.onloadedmetadata = () => {
+                        this.setState({
+                            duration: mediaRef.duration
+                        })
+                    }
                     this.setState({
                         isPlaying: true,
                         isPaused: false
                     })
                 })
-                .catch(error => {})
+                .catch(error => {
+                    // Ignore write errors
+                })
         }
     }
 
@@ -51,6 +59,16 @@ class Player extends Component {
                 isPaused: false
             })
         }
+    }
+
+    handlePrev = () => {
+        this.props.currentIndexDecrement(this.props.tracklist.length)
+        this.handleMediaPlay()
+    }
+
+    handleNext = () => {
+        this.props.currentIndexIncrement(this.props.tracklist.length)
+        this.handleMediaPlay()
     }
 
     handleOnTrackEnd = () => {
@@ -72,7 +90,13 @@ class Player extends Component {
                     src={tracklist[trackIndex].src}
                     onEnded={this.handleOnTrackEnd}
                 />
-                <Controls onTogglePlay={this.handleTogglePlay} />
+                {/* <div>{this.state.duration}</div> */}
+                <Controls
+                    isPlaying={this.state.isPlaying}
+                    onTogglePlay={this.handleTogglePlay}
+                    prev={this.handlePrev}
+                    next={this.handleNext}
+                />
             </div>
         )
     }

@@ -6,6 +6,7 @@ import * as audioPlayerActions from "../../../actions/audioplayer"
 import ContentMain from "../../contentmain"
 import ContentSidebar from "../../contentsidebar"
 
+import Image from "../../../../media/images/img_0387-folio.jpg"
 import Player from "./player"
 import { TrackData } from "./data/tracklist"
 
@@ -18,7 +19,12 @@ class AudioPlayer extends Component {
         return [
             <ContentMain>
                 <div className="content-column">
-                    <div className="audioplayer">
+                    <div
+                        className="audioplayer"
+                        style={{
+                            backgroundImage: `url(${Image})`
+                        }}
+                    >
                         <Player />
                     </div>
                 </div>

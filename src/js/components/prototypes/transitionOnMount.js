@@ -1,40 +1,42 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import { bindActionCreators } from "redux";
-import * as actionCreators from "../../actions/index";
+import React, { Component } from "react"
+import { connect } from "react-redux"
+import { bindActionCreators } from "redux"
+import * as actionCreators from "../../actions/notebook"
 
-import ContentMain from "../contentmain";
-import ContentSidebar from "../contentsidebar";
+import ContentMain from "../contentmain"
+import ContentSidebar from "../contentsidebar"
 
-import { TransitionMotion, spring } from "react-motion";
+import { TransitionMotion, spring } from "react-motion"
 
-import Logo from "../logo";
+import Circle from "../assets/shapes/circle"
 
 class TransitionOnMount extends Component {
     willEnter() {
         return {
             opacity: 0
-        };
+        }
     }
 
     willLeave() {
         return {
             opacity: spring(0)
-        };
+        }
     }
 
     render() {
+        const { transitionOnMount, toggleTransitionOnMount } = this.props
+
         return [
             <ContentMain>
                 <div className="content-column">
                     <div
-                        className="btn btn-circle btn-trigger"
-                        onClick={this.props.toggleLogo}
+                        className="btn btn-circle btn-default btn-trigger"
+                        onClick={toggleTransitionOnMount}
                     />
 
                     <TransitionMotion
                         styles={
-                            this.props.logo
+                            transitionOnMount
                                 ? []
                                 : [
                                       {
@@ -52,18 +54,16 @@ class TransitionOnMount extends Component {
                                 <div>
                                     {items.map(item => {
                                         return (
-                                            <Logo
+                                            <Circle
                                                 key={item.key}
                                                 style={{
-                                                    width: "240px",
-                                                    height: "auto",
                                                     opacity: item.style.opacity
                                                 }}
                                             />
-                                        );
+                                        )
                                     })}
                                 </div>
-                            );
+                            )
                         }}
                     </TransitionMotion>
                 </div>
@@ -83,18 +83,18 @@ class TransitionOnMount extends Component {
                     </a>
                 </p>
             </ContentSidebar>
-        ];
+        ]
     }
 }
 
 const mapStateToProps = state => {
     return {
-        logo: state.logo
-    };
-};
+        transitionOnMount: state.notebook.transitionOnMount
+    }
+}
 
 const mapDispatchToProps = dispatch => {
-    return bindActionCreators(actionCreators, dispatch);
-};
+    return bindActionCreators(actionCreators, dispatch)
+}
 
-export default connect(mapStateToProps, mapDispatchToProps)(TransitionOnMount);
+export default connect(mapStateToProps, mapDispatchToProps)(TransitionOnMount)

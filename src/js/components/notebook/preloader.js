@@ -1,17 +1,17 @@
-import React, { Component } from "react";
-import Lottie from "react-lottie";
+import React, { Component } from "react"
+import Lottie from "react-lottie"
 
-import ContentMain from "../contentmain";
-import ContentSidebar from "../contentsidebar";
+import ContentMain from "../contentmain"
+import ContentSidebar from "../contentsidebar"
 
-import * as animationData from "./data/preloader.json";
+import * as animationData from "./data/preloader.json"
 
 export default class Preloader extends Component {
     constructor(props) {
-        super(props);
+        super(props)
         this.state = {
             isPaused: false
-        };
+        }
     }
 
     render() {
@@ -22,13 +22,13 @@ export default class Preloader extends Component {
             // rendererSettings: {
             //   preserveAspectRatio: xMidYMid slice
             // }
-        };
+        }
 
         return [
             <ContentMain>
                 <div className="content-column">
                     <div
-                        className="btn btn-circle btn-trigger"
+                        className="btn btn-circle btn-default btn-trigger"
                         onClick={() =>
                             this.setState({ isPaused: !this.state.isPaused })
                         }
@@ -54,6 +54,6 @@ export default class Preloader extends Component {
                     </a>
                 </p>
             </ContentSidebar>
-        ];
+        ]
     }
 }

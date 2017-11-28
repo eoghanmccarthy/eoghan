@@ -34,6 +34,33 @@ main {
   position: absolute;
   width: 100%; }
 
+.audioplayer {
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 4px; }
+
+.audioplayer-controls {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row nowrap;
+          flex-flow: row nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%; }
+
+.audioplayer-track {
+  padding: 2rem;
+  width: 100%;
+  border: 1px solid #fff;
+  border-radius: 4px; }
+
 .slideshow-config {
   display: grid;
   grid-template-columns: auto;
