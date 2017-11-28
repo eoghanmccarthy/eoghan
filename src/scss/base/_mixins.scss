@@ -1,32 +1,32 @@
 /// Mixins
 
 @mixin breakpoint($breakpoint) {
-  $value: map-get($breakpoints, $breakpoint);
-  @media screen and (min-width: $value) {
-    @content;
-  }
+    $value: map-get($breakpoints, $breakpoint);
+    @media screen and (min-width: $value) {
+        @content;
+    }
 }
 
 @mixin font-size($fs-map) {
-  @each $fs-breakpoint, $fs-font-size in $fs-map {
-    @if $fs-breakpoint == null {
-      font-size: $fs-font-size;
-    } @else {
-      @media screen and (min-width: $fs-breakpoint) {
-        font-size: $fs-font-size;
-      }
+    @each $fs-breakpoint, $fs-font-size in $fs-map {
+        @if $fs-breakpoint == null {
+            font-size: $fs-font-size;
+        } @else {
+            @media screen and (min-width: $fs-breakpoint) {
+                font-size: $fs-font-size;
+            }
+        }
     }
-  }
 }
 
-@mixin btn-bgcolour($map) {
-  @each $name, $values in $map {
-    &-#{$name} {
-      background-color: nth($values, 1);
+@mixin btn-colours($map) {
+    @each $name, $values in $map {
+        &-#{$name} {
+            background-color: nth($values, 1);
 
-      &:hover {
-        background-color: nth($values, 2);
-      }
+            &:hover {
+                background-color: nth($values, 2);
+            }
+        }
     }
-  }
 }
