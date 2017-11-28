@@ -4,7 +4,7 @@ import {
     CURRENT_INDEX_SET
 } from "../../actiontypes/audioplayer"
 
-export const trackIndexReducer = (state = 0, action) => {
+export const trackIndex = (state = 0, action) => {
     switch (action.type) {
         case CURRENT_INDEX_INCREMENT:
             if (state > action.length - 2) {

@@ -7,7 +7,7 @@ import {
     STATUS_UNSELECTED_ALL
 } from "../../actiontypes/slideshow"
 
-export const libraryReducer = (state = [], action) => {
+export const library = (state = [], action) => {
     switch (action.type) {
         case LOAD_LIBRARY:
             return action.items

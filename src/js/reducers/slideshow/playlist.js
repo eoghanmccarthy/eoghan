@@ -4,7 +4,7 @@ import {
     CLEAR_PLAYLIST
 } from "../../actiontypes/slideshow"
 
-export const playlistReducer = (state = [], action) => {
+export const playlist = (state = [], action) => {
     switch (action.type) {
         case ADD_PLAYLIST_ITEM:
             let alreadyExists = state.findIndex(o => o.src === action.src) > -1

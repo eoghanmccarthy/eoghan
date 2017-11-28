@@ -1,27 +1,15 @@
 import { combineReducers } from "redux"
-import { globalReducer } from "./global"
-import { logoReducer } from "./logo"
-import { tracklistReducer } from "./audioplayer/tracklist"
-import { trackIndexReducer } from "./audioplayer/trackindex"
-import { libraryReducer } from "./slideshow/library"
-import { playlistReducer } from "./slideshow/playlist"
-import { previewReducer } from "./slideshow/preview"
-import { viewerReducer } from "./slideshow/viewer"
+import { globalHeader } from "./global"
+import { notebookReducer } from "./notebook/index"
+import { audioPlayerReducer } from "./audioplayer/index"
+import { slideshowReducer } from "./slideshow/index"
 
 const rootReducer = combineReducers({
-    global: globalReducer,
-    logo: logoReducer,
+    globalHeader,
+    notebook: notebookReducer,
     prototypes: combineReducers({
-        audioplayer: combineReducers({
-            tracklist: tracklistReducer,
-            trackIndex: trackIndexReducer
-        }),
-        slideshow: combineReducers({
-            library: libraryReducer,
-            playlist: playlistReducer,
-            preview: previewReducer,
-            viewer: viewerReducer
-        })
+        audioplayer: audioPlayerReducer,
+        slideshow: slideshowReducer
     })
 })
 

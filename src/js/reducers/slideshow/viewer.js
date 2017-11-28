@@ -1,10 +1,10 @@
-import { TOGGLE_VIEWER } from "../../actiontypes/slideshow";
+import { TOGGLE_VIEWER } from "../../actiontypes/slideshow"
 
-export const viewerReducer = (state = false, action) => {
+export const viewer = (state = false, action) => {
     switch (action.type) {
         case TOGGLE_VIEWER:
-            return !state;
+            return !state
         default:
-            return state;
+            return state
     }
-};
+}

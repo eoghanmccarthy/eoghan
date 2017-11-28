@@ -1,15 +1,15 @@
 import { TOGGLE_GLOBAL_HEADER } from "../actiontypes/global"
 
 const initialState = {
-    globalHeaderIsActive: true
+    isActive: true
 }
 
-export const globalReducer = (state = initialState, action) => {
+export const globalHeader = (state = initialState, action) => {
     switch (action.type) {
         case TOGGLE_GLOBAL_HEADER:
             return {
                 ...state,
-                globalHeaderIsActive: !state.globalHeaderIsActive
+                isActive: !state.isActive
             }
         default:
             return state
