@@ -1,11 +1,28 @@
-import { createStore } from 'redux';
+import { createStore } from "redux"
+import rootReducer from "./reducers/index"
+import throttle from "lodash.throttle"
 
-// Import the root reducer
-import rootReducer from './reducers/index';
+// Local storage
+import { loadState, saveState } from "./localStorage"
+const persistedState = loadState()
 
 const store = createStore(
-	rootReducer,
-	window.devToolsExtension && devToolsExtension()
-);
+    rootReducer,
+    persistedState,
+    window.devToolsExtension && devToolsExtension()
+)
 
-export default store;
+store.subscribe(
+    throttle(() => {
+        saveState({
+            prototypes: {
+                slideshow: {
+                    library: store.getState().prototypes.slideshow.library,
+                    playlist: store.getState().prototypes.slideshow.playlist
+                }
+            }
+        })
+    }, 1000)
+)
+
+export default store
