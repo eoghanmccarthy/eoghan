@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import Lottie from "react-lottie"
 
 import ContentMain from "../contentmain"
@@ -24,36 +24,40 @@ export default class Preloader extends Component {
             // }
         }
 
-        return [
-            <ContentMain>
-                <div className="content-column">
-                    <div
-                        className="btn btn-circle btn-default btn-trigger"
-                        onClick={() =>
-                            this.setState({ isPaused: !this.state.isPaused })
-                        }
-                    />
+        return (
+            <Fragment>
+                <ContentMain>
+                    <div className="content-column">
+                        <div
+                            className="btn btn-circle btn-default btn-trigger"
+                            onClick={() =>
+                                this.setState({
+                                    isPaused: !this.state.isPaused
+                                })
+                            }
+                        />
 
-                    <Lottie
-                        options={defaultOptions}
-                        height={400}
-                        width={400}
-                        isPaused={this.state.isPaused}
-                    />
-                </div>
-            </ContentMain>,
-            <ContentSidebar>
-                <h3>Lottie</h3>
-                <p>Looping animation with pause button.</p>
-                <p>
-                    <a
-                        href="https://www.lottiefiles.com/51-preloader"
-                        target="_blank"
-                    >
-                        animation
-                    </a>
-                </p>
-            </ContentSidebar>
-        ]
+                        <Lottie
+                            options={defaultOptions}
+                            height={400}
+                            width={400}
+                            isPaused={this.state.isPaused}
+                        />
+                    </div>
+                </ContentMain>
+                <ContentSidebar>
+                    <h3>Lottie</h3>
+                    <p>Looping animation with pause button.</p>
+                    <p>
+                        <a
+                            href="https://www.lottiefiles.com/51-preloader"
+                            target="_blank"
+                        >
+                            animation
+                        </a>
+                    </p>
+                </ContentSidebar>
+            </Fragment>
+        )
     }
 }

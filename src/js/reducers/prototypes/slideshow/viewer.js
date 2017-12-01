@@ -1,4 +1,4 @@
-import { TOGGLE_VIEWER } from "../../actiontypes/slideshow"
+import { TOGGLE_VIEWER } from "../../../actiontypes/slideshow"
 
 export const viewer = (state = false, action) => {
     switch (action.type) {

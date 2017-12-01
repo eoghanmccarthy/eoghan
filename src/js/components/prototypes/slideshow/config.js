@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import { Link } from "react-router-dom"
 import { withRouter } from "react-router"
 import { connect } from "react-redux"
@@ -185,54 +185,55 @@ class Config extends Component {
             </div>
         ))
 
-        return [
-            <ContentMain>
-                <div className="content-column">
-                    <div className="slideshow-config">
-                        <div className="config-controls">
-                            <div
-                                className="btn btn-small btn-outline btn-default btn-load-library"
-                                onClick={this.handleLoadLibrary.bind(this)}
-                            >
-                                Load Pre-Installed Library
-                            </div>
+        return (
+            <Fragment>
+                <ContentMain>
+                    <div className="content-column">
+                        <div className="slideshow-config">
+                            <div className="config-controls">
+                                <div
+                                    className="btn btn-small btn-outline btn-default btn-load-library"
+                                    onClick={this.handleLoadLibrary.bind(this)}
+                                >
+                                    Load Pre-Installed Library
+                                </div>
 
-                            {/* <div
+                                {/* <div
                 className="btn btn-outline btn-clear-selection"
                 onClick={this.handleClearPlaylist.bind(this)}
               >
                 Clear Selection
               </div> */}
-                        </div>
-                        <div className="config-library">
-                            <div className="library-items">
-                                {libraryItems}
-                                <div className="card-container">
-                                    <div className="card card-add-library-item">
-                                        <ReactFileReader
-                                            base64={true}
-                                            fileTypes={[
-                                                ".jpg",
-                                                ".jpeg",
-                                                ".png"
-                                            ]}
-                                            handleFiles={
-                                                this.handleFileSelectChange
-                                            }
-                                        >
-                                            <div className="btn btn-circle btn-default btn-circle-plus">
-                                                <div className="bars">
-                                                    <span />
-                                                    <span />
+                            </div>
+                            <div className="config-library">
+                                <div className="library-items">
+                                    {libraryItems}
+                                    <div className="card-container">
+                                        <div className="card card-add-library-item">
+                                            <ReactFileReader
+                                                base64={true}
+                                                fileTypes={[
+                                                    ".jpg",
+                                                    ".jpeg",
+                                                    ".png"
+                                                ]}
+                                                handleFiles={
+                                                    this.handleFileSelectChange
+                                                }
+                                            >
+                                                <div className="btn btn-circle btn-default btn-circle-plus">
+                                                    <div className="bars">
+                                                        <span />
+                                                        <span />
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </ReactFileReader>
+                                            </ReactFileReader>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
 
-                        {/* <div className="config-controls">
+                            {/* <div className="config-controls">
               <div className="btn-add-library-item">
                 <form onSubmit={this.handleFileSubmit.bind(this)}>
                   {this.state.selectedFile && (
@@ -269,33 +270,36 @@ class Config extends Component {
               </div>
             </div> */}
 
-                        <div className="config-controls">
-                            {playlist.length > 0 && (
-                                <div
-                                    className="btn btn-large btn-green btn-outline"
-                                    onClick={this.handleToggleViewer.bind(this)}
-                                >
-                                    Launch
-                                </div>
+                            <div className="config-controls">
+                                {playlist.length > 0 && (
+                                    <div
+                                        className="btn btn-large btn-green btn-outline"
+                                        onClick={this.handleToggleViewer.bind(
+                                            this
+                                        )}
+                                    >
+                                        Launch
+                                    </div>
+                                )}
+                            </div>
+
+                            {viewer && <Viewer />}
+
+                            {preview && (
+                                <Preview previewSrc={this.state.previewSrc} />
                             )}
                         </div>
-
-                        {viewer && <Viewer />}
-
-                        {preview && (
-                            <Preview previewSrc={this.state.previewSrc} />
-                        )}
                     </div>
-                </div>
-            </ContentMain>,
-            <ContentSidebar>
-                <h3>ReactJS / Redux</h3>
-                <p>
-                    Configure a slideshow, add your own images or load a library
-                    of images. Once configured, click to launch :)
-                </p>
-            </ContentSidebar>
-        ]
+                </ContentMain>
+                <ContentSidebar>
+                    <h3>ReactJS / Redux</h3>
+                    <p>
+                        Configure a slideshow, add your own images or load a
+                        library of images. Once configured, click to launch :)
+                    </p>
+                </ContentSidebar>
+            </Fragment>
+        )
     }
 }
 

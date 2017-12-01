@@ -2,16 +2,17 @@ import React, { Component } from "react"
 import { NavLink } from "react-router-dom"
 import { connect } from "react-redux"
 
+import Logo from "../../media/images/logo-alt.png"
+
 class Navigation extends Component {
     render() {
+        const { isActive } = this.props
+
         return (
             <div>
-                {this.props.isActive && (
+                {isActive && (
                     <header className="global-header">
-                        <img
-                            className="omm-logo"
-                            src="assets/media/omm-logo.png"
-                        />
+                        <img className="logo" src={Logo} />
 
                         <nav>
                             <NavLink exact to="/">
@@ -29,7 +30,7 @@ class Navigation extends Component {
 
 const mapStateToProps = state => {
     return {
-        isActive: state.globalHeader.isActive
+        isActive: state.global.globalHeader.isActive
     }
 }
 

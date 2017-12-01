@@ -1,15 +1,17 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
-import ContentList from "../components/contentlist";
+import ContentList from "../components/contentlist"
 
-import ToggleSwitch from "../components/notebook/toggleswitch";
-import FilterButton from "../components/notebook/filterbutton";
-import MenuButton from "../components/notebook/menubutton";
-import LoadingRefresh from "../components/notebook/loadingrefresh";
-import TwiiterHeart from "../components/notebook/twitterheart";
-import Preloader from "../components/notebook/preloader";
-import InfinityLoader from "../components/notebook/infinityloader";
-import Refresh from "../components/notebook/refresh";
+import ToggleSwitch from "../components/notebook/toggleswitch"
+import FilterButton from "../components/notebook/filterbutton"
+import MenuButton from "../components/notebook/menubutton"
+import LoadingRefresh from "../components/notebook/loadingrefresh"
+import TwiiterHeart from "../components/notebook/twitterheart"
+import Preloader from "../components/notebook/preloader"
+import InfinityLoader from "../components/notebook/infinityloader"
+import Refresh from "../components/notebook/refresh"
+import StaggeredTransitionOnMount from "../components/notebook/staggeredTransitionOnMount"
+import TransitionOnMount from "../components/notebook/transitionOnMount"
 
 export default class Notebook extends Component {
     render() {
@@ -50,17 +52,13 @@ export default class Notebook extends Component {
                 <div className="grid-main">
                     <ToggleSwitch />
                     <FilterButton />
-                    <LoadingRefresh />
                     <TwiiterHeart />
                     <Preloader />
-                    <InfinityLoader />
-                    <Refresh />
                     <MenuButton />
-                    {/* <OMMEvent />
-					<Muzzle />
-					<PinJump /> */}
+                    <StaggeredTransitionOnMount />
+                    <TransitionOnMount />
                 </div>
             </div>
-        );
+        )
     }
 }

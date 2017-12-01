@@ -2,7 +2,7 @@ import {
     CURRENT_INDEX_INCREMENT,
     CURRENT_INDEX_DECREMENT,
     CURRENT_INDEX_SET
-} from "../../actiontypes/audioplayer"
+} from "../../../actiontypes/audioplayer"
 
 export const trackIndex = (state = 0, action) => {
     switch (action.type) {

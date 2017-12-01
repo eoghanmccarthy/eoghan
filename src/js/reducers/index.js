@@ -1,11 +1,11 @@
 import { combineReducers } from "redux"
-import { globalHeader } from "./global"
+import { globalReducer } from "./global/index"
 import { notebookReducer } from "./notebook/index"
-import { audioPlayerReducer } from "./audioplayer/index"
-import { slideshowReducer } from "./slideshow/index"
+import { audioPlayerReducer } from "./prototypes/audioplayer/index"
+import { slideshowReducer } from "./prototypes/slideshow/index"
 
 const rootReducer = combineReducers({
-    globalHeader,
+    global: globalReducer,
     notebook: notebookReducer,
     prototypes: combineReducers({
         audioplayer: audioPlayerReducer,

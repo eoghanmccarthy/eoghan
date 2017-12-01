@@ -2,8 +2,6 @@ import React, { Component } from "react"
 
 import ContentList from "../components/contentlist"
 
-import StaggeredTransitionOnMount from "../components/prototypes/staggeredTransitionOnMount"
-import TransitionOnMount from "../components/prototypes/transitionOnMount"
 import AudioPlayer from "../components/prototypes/audioplayer/audioplayer"
 import SlideShow from "../components/prototypes/slideshow/config"
 
@@ -30,8 +28,6 @@ export default class Transitions extends Component {
                 <div className="grid-main">
                     <AudioPlayer />
                     <SlideShow />
-                    <StaggeredTransitionOnMount />
-                    <TransitionOnMount />
                 </div>
             </div>
         )

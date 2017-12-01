@@ -2,7 +2,7 @@ import {
     ADD_PLAYLIST_ITEM,
     REMOVE_PLAYLIST_ITEM,
     CLEAR_PLAYLIST
-} from "../../actiontypes/slideshow"
+} from "../../../actiontypes/slideshow"
 
 export const playlist = (state = [], action) => {
     switch (action.type) {

@@ -28,14 +28,8 @@ class Preview extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-        preview: state.prototypes.slideshow.preview
-    }
-}
-
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({ togglePreview, toggleGlobalHeader }, dispatch)
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(Preview)
+export default connect(null, mapDispatchToProps)(Preview)

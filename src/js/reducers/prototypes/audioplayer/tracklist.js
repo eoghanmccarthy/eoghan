@@ -1,4 +1,4 @@
-import { LOAD_MEDIA } from "../../actiontypes/audioplayer"
+import { LOAD_MEDIA } from "../../../actiontypes/audioplayer"
 
 export const tracklist = (state = [], action) => {
     switch (action.type) {

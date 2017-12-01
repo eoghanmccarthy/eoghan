@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component } from "react"
 
 export default class Modal extends Component {
     render() {
@@ -15,6 +15,6 @@ export default class Modal extends Component {
                 </div>
                 {this.props.children}
             </div>
-        );
+        )
     }
 }

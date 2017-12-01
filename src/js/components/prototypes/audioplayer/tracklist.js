@@ -7,23 +7,19 @@ import Track from "./track"
 
 class Tracklist extends Component {
     render() {
-        const { tracklist } = this.props
+        const { tracklist, onTrackChange } = this.props
 
         const mediaItems = tracklist.map((item, index) => (
             <Track
                 key={index}
                 index={index}
-                onClick={this.props.onTrackChange}
+                onClick={onTrackChange}
                 name={item.name}
                 src={item.src}
             />
         ))
 
-        return (
-            <div>
-                <div className="audioplayer-tracklist">{mediaItems}</div>
-            </div>
-        )
+        return <div className="audioplayer-tracklist">{mediaItems}</div>
     }
 }
 

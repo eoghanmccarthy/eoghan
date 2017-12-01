@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { Component, Fragment } from "react"
 import { connect } from "react-redux"
 import { bindActionCreators } from "redux"
 import * as audioPlayerActions from "../../../actions/audioplayer"
@@ -82,7 +82,7 @@ class Player extends Component {
         const { tracklist, trackIndex } = this.props
 
         return (
-            <div>
+            <Fragment>
                 <TrackList onTrackChange={this.handleCurrentIndexSet} />
                 <audio
                     id="audio"
@@ -97,7 +97,7 @@ class Player extends Component {
                     prev={this.handlePrev}
                     next={this.handleNext}
                 />
-            </div>
+            </Fragment>
         )
     }
 }
