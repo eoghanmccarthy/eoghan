@@ -1,5 +1,4 @@
 const path = require("path")
-const webpack = require("webpack")
 const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
@@ -40,7 +39,7 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ExtractTextPlugin.extract({
                     use: [
-                        "css-loader",
+                        { loader: "css-loader", options: { minimize: true } },
                         {
                             loader: "postcss-loader",
                             options: {
