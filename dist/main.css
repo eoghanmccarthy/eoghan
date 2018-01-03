@@ -14,7 +14,7 @@ html {
 body {
   margin: 0;
   font-family: "Roboto Mono", sans-serif;
-  font-weight: 300;
+  font-weight: 100;
   line-height: 1.45;
   color: #fff;
   background: #3d3d3d; }
@@ -34,11 +34,38 @@ main {
   position: absolute;
   width: 100%; }
 
+h1,
+h2,
+h3,
+p,
+ul,
+a {
+  font-weight: 100; }
+
+h1 {
+  font-size: 36px; }
+
+h2 {
+  font-size: 30px; }
+
+h3,
+p,
+ul {
+  font-size: 16px; }
+
+a {
+  color: #fff;
+  text-decoration: underline;
+  word-wrap: break-word; }
+
 .audioplayer {
   padding: 2rem;
   width: 100%;
   border: 1px solid #fff;
-  border-radius: 4px; }
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; }
 
 .audioplayer-controls {
   display: -webkit-box;
@@ -51,15 +78,21 @@ main {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  padding: 0.5rem;
   width: 100%; }
 
 .audioplayer-track {
+  margin: 1rem 0;
   padding: 2rem;
   width: 100%;
   border: 1px solid #fff;
   border-radius: 4px; }
+
+.track-active {
+  background-color: #333; }
 
 .slideshow-config {
   display: grid;
@@ -291,23 +324,6 @@ main {
     min-width: 100%;
     min-height: 100%; }
 
-h1 {
-  font-size: 36px; }
-
-h2 {
-  font-size: 30px; }
-
-h3,
-p,
-ul {
-  font-size: 16px;
-  font-weight: 100; }
-
-a {
-  color: #fff;
-  text-decoration: underline;
-  word-wrap: break-word; }
-
 .modal {
   display: block;
   position: fixed;
@@ -338,24 +354,6 @@ a {
   padding: 0; }
   .content-list li {
     margin-bottom: 1rem; }
-
-.logo {
-  padding: 3rem 0;
-  margin: 0 auto; }
-  .logo svg {
-    display: inline-block; }
-    .logo svg path {
-      fill: #000; }
-  header .logo {
-    width: 120px; }
-    @media screen and (min-width: 768px) {
-      header .logo {
-        width: 150px; } }
-  footer .logo {
-    width: 45px; }
-    @media screen and (min-width: 768px) {
-      footer .logo {
-        width: 60px; } }
 
 .btn-wrapper {
   margin: 5px 0; }
@@ -421,10 +419,7 @@ a {
   width: 36px;
   height: 36px;
   border: 1px solid #fff;
-  border-radius: 50%;
-  opacity: 1; }
-  .btn-circle:hover {
-    background-color: #242424; }
+  border-radius: 50%; }
   .btn-circle .bars {
     display: table-cell;
     vertical-align: middle; }
@@ -456,6 +451,36 @@ a {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg); }
 
+.btn-circle-play .bars span:first-child {
+  margin-top: 0;
+  margin-left: 35%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.btn-circle-play .bars span {
+  margin-top: -1px;
+  margin-right: 35%;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg); }
+
+.btn-circle-play .bars span:last-child {
+  margin-top: -1px;
+  margin-right: 0;
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg); }
+
+.btn-circle-pause .bars span:first-child {
+  margin-top: 0;
+  margin-left: 35%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
+.btn-circle-pause .bars span:last-child {
+  margin-top: -1px;
+  margin-right: 35%;
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg); }
+
 .btn-circle-forward .bars span {
   width: 40%; }
 
@@ -469,15 +494,13 @@ a {
   -webkit-transform: rotate(30deg);
           transform: rotate(30deg); }
 
-.btn-circle-target {
-  background-color: #ff0000; }
-  .btn-circle-target .bars div {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: 50%;
-    border: 1px solid #fff;
-    border-radius: 50%; }
+.btn-circle-target .bars div {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  height: 50%;
+  border: 1px solid #fff;
+  border-radius: 50%; }
 
 .btn-trigger {
   position: absolute;
@@ -617,14 +640,14 @@ a {
   .global-header nav a {
     margin-right: 2rem;
     font-size: 16px;
-    font-weight: 300;
     text-decoration: none;
     color: #fff; }
-  .global-header .omm-logo {
+  .global-header .logo {
     -ms-flex-item-align: start;
         align-self: flex-start;
-    width: 80px; }
+    width: 40px;
+    height: auto; }
     @media screen and (min-width: 992px) {
-      .global-header .omm-logo {
-        -ms-flex-item-align: center;
-            align-self: center; } }
+      .global-header .logo {
+        -ms-flex-item-align: end;
+            align-self: flex-end; } }

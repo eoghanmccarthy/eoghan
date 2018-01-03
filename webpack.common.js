@@ -4,12 +4,6 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin")
 
 module.exports = {
     entry: ["./src/js/index.js", "./src/scss/main.scss"],
-    devServer: {
-        publicPath: "/",
-        contentBase: path.join(__dirname, "/dist"),
-        watchContentBase: true,
-        historyApiFallback: true
-    },
     output: {
         path: path.join(__dirname, "/dist"),
         publicPath: "/",
