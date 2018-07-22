@@ -21,6 +21,7 @@
   "dependencies": {
     "animated": "^0.2.2",
     "circular-dependency-plugin": "^5.0.2",
+    "classnames": "^2.2.6",
     "connected-react-router": "^4.3.0",
     "history": "^4.7.2",
     "lodash.throttle": "^4.1.1",

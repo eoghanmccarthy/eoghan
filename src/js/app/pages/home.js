@@ -7,7 +7,10 @@ export default class Home extends Component {
     return (
       <div className="me__page">
         <div className="page__tile">
-          <h1>recent libraries</h1>
+          <h1>
+            some of tools and libraries ive used in personal and work projects
+            recently
+          </h1>
         </div>
         <Skills />
       </div>

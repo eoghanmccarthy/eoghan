@@ -24,7 +24,6 @@ class Skills extends Component {
     const { skillsData } = this.props;
     return (
       <div className="me__skills">
-        <div>skills</div>
         <div className="skills">
           {skillsData.map((item, index) => <Item key={index} item={item} />)}
         </div>
