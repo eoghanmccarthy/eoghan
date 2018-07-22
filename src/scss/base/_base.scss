@@ -21,12 +21,11 @@ body {
 
 .me {
   display: grid;
-  grid-template-rows: 100px auto 100px;
+  grid-template-rows: 72px auto 72px;
   grid-template-areas:
     "header header header"
     "main main main"
     "footer footer footer";
   height: 100%;
   min-height: 100vh;
-  padding: 0 30px;
 }
