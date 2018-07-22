@@ -4,7 +4,7 @@ export default class Contact extends Component {
   render() {
     return (
       <div className="contact">
-        <div>contact</div>
+        <p>me@eoghan.io</p>
       </div>
     );
   }

@@ -6,7 +6,6 @@ export default class Footer extends Component {
   render() {
     return (
       <div className="me__footer">
-        <div>footer</div>
         <Contact />
       </div>
     );

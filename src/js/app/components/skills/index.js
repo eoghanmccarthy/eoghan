@@ -9,11 +9,13 @@ import * as skillsActions from "actions/skills";
 import Item from "components/skills/components/item";
 
 const library = [
+  { name: "javascript", category: "webdev" },
   { name: "react", category: "webdev" },
   { name: "redux", category: "webdev" },
   { name: "redux-observable", category: "webdev" },
   { name: "rx-js", category: "webdev" },
-  { name: "redux-persist", category: "webdev" }
+  { name: "redux-persist", category: "webdev" },
+  { name: "figma", category: "design" }
 ];
 
 class Skills extends Component {
@@ -23,10 +25,8 @@ class Skills extends Component {
   render() {
     const { skillsData } = this.props;
     return (
-      <div className="me__skills">
-        <div className="skills">
-          {skillsData.map((item, index) => <Item key={index} item={item} />)}
-        </div>
+      <div className="skills">
+        {skillsData.map((item, index) => <Item key={index} item={item} />)}
       </div>
     );
   }

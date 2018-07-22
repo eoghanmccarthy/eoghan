@@ -7,8 +7,8 @@ export default class Home extends Component {
     return (
       <main className="me__page">
         <div className="page__tile">
-          <h1>Stuff</h1>
-          <h2>Some of the tools and libraries ive used recently</h2>
+          <h1>Stuff //</h1>
+          <h2>Languages, libraries and tools ive been using recently /</h2>
         </div>
         <Skills />
       </main>
