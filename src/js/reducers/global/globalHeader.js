@@ -1,4 +1,4 @@
-import { TOGGLE_GLOBAL_HEADER } from "../../actiontypes/global"
+import { TOGGLE_GLOBAL_HEADER } from "../../types/global"
 
 const initialState = {
     isActive: true

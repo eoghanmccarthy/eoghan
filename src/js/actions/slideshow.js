@@ -10,7 +10,7 @@ import {
     CLEAR_PLAYLIST,
     TOGGLE_PREVIEW,
     TOGGLE_VIEWER
-} from "../actiontypes/slideshow"
+} from "../types/slideshow"
 
 export const loadLibrary = data => {
     return {

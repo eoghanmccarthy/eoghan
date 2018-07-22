@@ -1,4 +1,4 @@
-import { TOGGLE_PREVIEW } from "../../../actiontypes/slideshow"
+import { TOGGLE_PREVIEW } from "../../../types/slideshow"
 
 export const preview = (state = false, action) => {
     switch (action.type) {

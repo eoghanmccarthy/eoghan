@@ -3,7 +3,7 @@ import {
     CURRENT_INDEX_INCREMENT,
     CURRENT_INDEX_DECREMENT,
     CURRENT_INDEX_SET
-} from "../actiontypes/audioplayer"
+} from "../types/audioplayer"
 
 export const loadMedia = data => {
     return {

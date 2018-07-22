@@ -5,7 +5,7 @@ import {
     STATUS_SELECTED_ITEM,
     STATUS_UNSELECTED_ITEM,
     STATUS_UNSELECTED_ALL
-} from "../../../actiontypes/slideshow"
+} from "../../../types/slideshow"
 
 export const library = (state = [], action) => {
     switch (action.type) {
