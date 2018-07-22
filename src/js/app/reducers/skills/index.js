@@ -1,7 +1,7 @@
 import { LOAD_SKILLS, ADD_SKILL, DELETE_SKILL } from "types/skills";
 
 const initialState = {
-  data: ["react", "redux", "redux-observable", "rx-js", "redux-persist"]
+  data: []
 };
 
 const skills = (state = initialState, action) => {

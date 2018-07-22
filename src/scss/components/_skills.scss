@@ -1,0 +1,22 @@
+/// Skills
+
+.me__skills {
+  .skills {
+    display: inline-grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 15px;
+    width: 100%;
+    .skill {
+      position: relative;
+      height: 50px;
+      border-radius: 5px;
+      background-color: $light-grey;
+      span {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+}
