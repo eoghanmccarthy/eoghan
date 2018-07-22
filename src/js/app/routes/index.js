@@ -2,16 +2,16 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 
 import Header from "components/header";
-import Home from "containers/home";
-import Contact from "components/contact";
+import Footer from "components/footer";
+import Home from "pages/home";
 
 export default () => (
-  <div className="wrapper">
+  <div className="me">
     <Header />
     <Switch>
       <Route exact path="/" render={() => <Home />} />
       <Route render={() => <Home />} />
     </Switch>
-    <Contact />
+    <Footer />
   </div>
 );

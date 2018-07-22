@@ -16,8 +16,10 @@ module.exports = {
       components: path.resolve(__dirname, "src/js/app/components/"),
       containers: path.resolve(__dirname, "src/js/app/containers/"),
       epics: path.resolve(__dirname, "src/js/app/epics/"),
+      pages: path.resolve(__dirname, "src/js/app/pages/"),
       reducers: path.resolve(__dirname, "src/js/app/reducers/"),
       routes: path.resolve(__dirname, "src/js/app/routes/"),
+      selectors: path.resolve(__dirname, "src/js/app/selectors/"),
       types: path.resolve(__dirname, "src/js/app/types/"),
       utils: path.resolve(__dirname, "src/js/utils/")
     },
