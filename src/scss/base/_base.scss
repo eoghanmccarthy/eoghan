@@ -1,38 +1,38 @@
 /// Base
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 html {
-    @extend %root-size;
-    text-size-adjust: 100%;
+  @extend %root-size;
+  text-size-adjust: 100%;
 }
 
 body {
-    margin: 0;
-    font-family: $base__font;
-    font-weight: fw(thin);
-    line-height: $base__line-height * 1.45;
-    color: $white;
-    background: $color-primary;
+  margin: 0;
+  font-family: $base__font;
+  font-weight: fw(thin);
+  line-height: $base__line-height * 1.45;
+  color: $white;
+  background: $color-primary;
 }
 
 html,
 body {
-    height: 100%;
-    max-height: 100vh;
+  height: 100%;
+  max-height: 100vh;
 }
 
 main {
-    padding: 0 0 pd(lg);
+  padding: 0 0 pd(lg);
 }
 
 .route-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .route-wrapper > div {
-    position: absolute;
-    width: 100%;
+  position: absolute;
+  width: 100%;
 }
