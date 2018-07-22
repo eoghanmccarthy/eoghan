@@ -9,6 +9,18 @@ module.exports = {
     filename: "bundle.js"
   },
   resolve: {
+    alias: {
+      src: path.resolve(__dirname, "src/"),
+      app: path.resolve(__dirname, "src/js/app/"),
+      actions: path.resolve(__dirname, "src/js/app/actions/"),
+      components: path.resolve(__dirname, "src/js/app/components/"),
+      containers: path.resolve(__dirname, "src/js/app/containers/"),
+      epics: path.resolve(__dirname, "src/js/app/epics/"),
+      reducers: path.resolve(__dirname, "src/js/app/reducers/"),
+      routes: path.resolve(__dirname, "src/js/app/routes/"),
+      types: path.resolve(__dirname, "src/js/app/types/"),
+      utils: path.resolve(__dirname, "src/js/utils/")
+    },
     extensions: [".js", ".jsx"]
   },
   optimization: {
