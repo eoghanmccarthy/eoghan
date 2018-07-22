@@ -2,25 +2,30 @@
 
 // Breakpoint
 @function bp($value) {
-	@return map-get($breakpoints, $value);
+  @return map-get($breakpoints, $value);
+}
+
+// Z-index
+@function zi($value) {
+  @return map-get($z-index, $value);
 }
 
 // Margin
 @function mg($value) {
-	@return map-get($margin, $value);
+  @return map-get($margin, $value);
 }
 
 // Padding
 @function pd($value) {
-	@return map-get($padding, $value);
+  @return map-get($padding, $value);
+}
+
+// Color palette
+@function palette($color, $shade: "base") {
+  @return map-get(map-get($palettes, $color), $shade);
 }
 
 // Font weight
-@function fw($value: 'normal') {
-	@return map-get($font-weight, $value);
-}
-
-// Color palette modifiers
-@function palette($color, $shade: 'base') {
-	@return map-get(map-get($palettes, $color), $shade);
+@function fw($value: "normal") {
+  @return map-get($font-weight, $value);
 }

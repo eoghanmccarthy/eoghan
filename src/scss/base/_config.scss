@@ -1,23 +1,11 @@
 /// Config
 
-// Named breakpoints
-$mobile-landscape: 576px;
-$tablet-portrait: 768px;
-$tablet-landscape: 992px;
-$desktop: 1200px;
-
-// Breakpoints
-$bp-sm: #{$mobile-landscape};
-$bp-md: #{$tablet-portrait};
-$bp-lg: #{$tablet-landscape};
-$bp-xl: #{$desktop};
-
 // Breakpoints map
 $breakpoints: (
-  sm: $bp-sm,
-  md: $bp-md,
-  lg: $bp-lg,
-  xl: $bp-xl
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 );
 
 // Root size

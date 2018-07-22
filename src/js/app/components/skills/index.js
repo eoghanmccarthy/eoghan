@@ -10,12 +10,17 @@ import Item from "components/skills/components/item";
 
 const library = [
   { name: "javascript", category: "webdev" },
+  { name: "html", category: "frontend" },
+  { name: "css", category: "frontend" },
   { name: "react", category: "webdev" },
+  { name: "react-router", category: "frontend" },
   { name: "redux", category: "webdev" },
   { name: "redux-observable", category: "webdev" },
   { name: "rx-js", category: "webdev" },
   { name: "redux-persist", category: "webdev" },
-  { name: "figma", category: "design" }
+  { name: "sass", category: "frontend" },
+  { name: "figma", category: "design" },
+  { name: "adobe illustrator", category: "design" }
 ];
 
 class Skills extends Component {

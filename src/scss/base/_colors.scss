@@ -19,7 +19,7 @@ $modal-background: rgba(0, 0, 0, 0.55);
 
 // Brand colours
 $color-primary: $dark-grey;
-$colour__body-background: $light-grey;
+$colour__body-background: linear-gradient(-180deg, $vivid-cyan, $transparent);
 
 // UI colours map
 $ui-colours: (
