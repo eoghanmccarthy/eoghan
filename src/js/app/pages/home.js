@@ -5,15 +5,13 @@ import Skills from "components/skills";
 export default class Home extends Component {
   render() {
     return (
-      <div className="me__page">
+      <main className="me__page">
         <div className="page__tile">
-          <h1>
-            some of tools and libraries ive used in personal and work projects
-            recently
-          </h1>
+          <h1>Stuff</h1>
+          <h2>Some of the tools and libraries ive used recently</h2>
         </div>
         <Skills />
-      </div>
+      </main>
     );
   }
 }
