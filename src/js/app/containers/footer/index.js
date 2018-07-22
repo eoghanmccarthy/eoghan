@@ -5,9 +5,9 @@ import Contact from "components/contact";
 export default class Footer extends Component {
   render() {
     return (
-      <div className="me__footer">
+      <footer className="me__footer">
         <Contact />
-      </div>
+      </footer>
     );
   }
 }

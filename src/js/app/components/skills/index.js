@@ -30,9 +30,9 @@ class Skills extends Component {
   render() {
     const { skillsData } = this.props;
     return (
-      <div className="skills">
+      <section className="skills">
         {skillsData.map((item, index) => <Item key={index} item={item} />)}
-      </div>
+      </section>
     );
   }
 }
