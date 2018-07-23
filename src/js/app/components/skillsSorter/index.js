@@ -13,6 +13,12 @@ export default class SkillsListSorter extends Component {
     };
   }
 
+  handleSetFilter = filter => {
+    this.setState({
+      filter: filter
+    });
+  };
+
   render() {
     const { dataSet } = this.props;
     const { active } = this.state;
@@ -31,6 +37,13 @@ export default class SkillsListSorter extends Component {
       }
     };
 
-    return <Fragment>{this.props.children(sorter(dataSet, active))}</Fragment>;
+    return (
+      <Fragment>
+        {this.props.children({
+          setFilter: this.handleSetFilter,
+          sortedData: sorter(dataSet, active)
+        })}
+      </Fragment>
+    );
   }
 }

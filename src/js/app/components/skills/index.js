@@ -9,6 +9,7 @@ import * as skillsActions from "actions/skills";
 import { library } from "data/skills";
 
 import Item from "components/skills/components/item";
+import SkillsListSorter from "components/skillsSorter";
 
 class Skills extends Component {
   componentDidMount = () => {
