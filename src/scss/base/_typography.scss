@@ -13,8 +13,9 @@ h1,
 h2 {
   margin: 0 0 16px;
   color: $black;
-  font-family: $base__font-secondary;
+  font-family: $base__font-primary;
   font-weight: fw(light);
+  letter-spacing: -0.025em;
   line-height: 1;
   text-align: left;
 }
@@ -30,12 +31,11 @@ h2 {
 h3,
 p,
 ul {
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 
 p {
   color: $black;
-  font-size: 1.6rem;
 }
 
 a {

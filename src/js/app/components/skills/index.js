@@ -6,22 +6,9 @@ import { selectSkillsData } from "selectors/skills";
 
 import * as skillsActions from "actions/skills";
 
-import Item from "components/skills/components/item";
+import { library } from "data/skills";
 
-const library = [
-  { name: "javascript", category: "webdev" },
-  { name: "html", category: "frontend" },
-  { name: "css", category: "frontend" },
-  { name: "react", category: "webdev" },
-  { name: "react-router", category: "frontend" },
-  { name: "redux", category: "webdev" },
-  { name: "redux-observable", category: "webdev" },
-  { name: "rx-js", category: "webdev" },
-  { name: "redux-persist", category: "webdev" },
-  { name: "sass", category: "frontend" },
-  { name: "figma", category: "design" },
-  { name: "adobe illustrator", category: "design" }
-];
+import Item from "components/skills/components/item";
 
 class Skills extends Component {
   componentDidMount = () => {

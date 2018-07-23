@@ -22,6 +22,7 @@ module.exports = {
       routes: path.resolve(__dirname, "src/js/app/routes/"),
       selectors: path.resolve(__dirname, "src/js/app/selectors/"),
       types: path.resolve(__dirname, "src/js/app/types/"),
+      data: path.resolve(__dirname, "src/js/data/"),
       utils: path.resolve(__dirname, "src/js/utils/")
     },
     extensions: [".js", ".jsx"]
