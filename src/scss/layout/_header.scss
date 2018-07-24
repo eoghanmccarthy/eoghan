@@ -15,5 +15,8 @@
     width: 40px;
     height: auto;
     transform: translateY(-50%);
+    svg path {
+      fill: blue;
+    }
   }
 }
