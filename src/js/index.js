@@ -9,6 +9,8 @@ import configureStore from "./configureStore";
 
 import App from "app";
 
+import "../scss/main.scss";
+
 const initialState = {};
 
 const history = createHistory();

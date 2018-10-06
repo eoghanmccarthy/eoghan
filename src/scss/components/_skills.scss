@@ -14,10 +14,10 @@
   padding: pd(xl) 0;
   .skill {
     position: relative;
-    height: 70px;
+    height: 90px;
     font-weight: fw(normal);
-    background-color: $white;
-    border-radius: 3px;
+    background-color: rgba(255, 255, 255, 0.85);
+    border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
     transition: all $transition-speed cubic-bezier(0.25, 0.8, 0.25, 1);
     &:hover {
@@ -25,13 +25,13 @@
         0 10px 10px rgba(0, 0, 0, 0.22);
     }
     &.category__webdev {
-      border-bottom: 2px solid $vivid-cyan;
+      border-bottom: 3px solid $vivid-cyan;
     }
     &.category__frontend {
-      border-bottom: 2px solid $vivid-cyan;
+      border-bottom: 3px solid $vivid-cyan;
     }
     &.category__design {
-      border-bottom: 2px solid $fuchsia;
+      border-bottom: 3px solid $fuchsia;
     }
     span {
       position: absolute;

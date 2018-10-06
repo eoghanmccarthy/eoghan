@@ -16,12 +16,12 @@ body {
   font-weight: fw(thin);
   line-height: $base__line-height * 1.45;
   text-align: center;
-  background: $colour__body-background;
+  background-color: $white;
 }
 
 .me {
   display: grid;
-  grid-template-rows: 72px auto 72px;
+  grid-template-rows: 144px auto 72px;
   grid-template-areas:
     "header header header"
     "main main main"
