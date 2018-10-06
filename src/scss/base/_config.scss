@@ -1,23 +1,11 @@
 /// Config
 
-// Named breakpoints
-$mobile-landscape: 576px;
-$tablet-portrait: 768px;
-$tablet-landscape: 992px;
-$desktop: 1200px;
-
-// Breakpoints
-$bp-sm: #{$mobile-landscape};
-$bp-md: #{$tablet-portrait};
-$bp-lg: #{$tablet-landscape};
-$bp-xl: #{$desktop};
-
 // Breakpoints map
 $breakpoints: (
-  sm: $bp-sm,
-  md: $bp-md,
-  lg: $bp-lg,
-  xl: $bp-xl
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
 );
 
 // Root size
@@ -37,7 +25,8 @@ $base__line-height: 1;
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i");
 @import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
 // Font stacks
-$base__font: "Roboto Mono", sans-serif;
+$base__font-primary: "Roboto Mono", sans-serif;
+$base__font-secondary: "Roboto", sans-serif;
 // Font weight
 $font-weight: (
   thin: 100,
@@ -69,4 +58,4 @@ $padding: (
   xxl: $base__padding * 4
 );
 // Transitions
-$speed: 0.2s;
+$transition-speed: 0.3s;

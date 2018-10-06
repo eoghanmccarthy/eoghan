@@ -5,7 +5,7 @@ import { connectRouter, routerMiddleware } from "connected-react-router";
 
 import { createEpicMiddleware } from "redux-observable";
 
-import rootReducer from "./reducers/index";
+import rootReducer from "reducers/index";
 
 const persistConfig = {
   key: "root",

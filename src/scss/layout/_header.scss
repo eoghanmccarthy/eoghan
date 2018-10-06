@@ -1,34 +1,20 @@
 /// Header
 
-.global-header {
+.me__header {
+  grid-area: header;
   display: flex;
-  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: center;
+  position: relative;
   width: 100%;
-  padding: pd(lg) pd(xl);
-  z-index: 999;
-
-  @media screen and (min-width: $bp-lg) {
-    align-items: center;
-    flex-flow: row-reverse nowrap;
-    justify-content: space-between;
-  }
-
-  nav {
-    a {
-      margin-right: mg(lg);
-      font-size: 16px;
-      text-decoration: none;
-      color: $white;
-    }
-  }
-
   .logo {
-    align-self: flex-start;
-    width: 40px;
+    position: absolute;
+    top: 50%;
+    width: 100px;
     height: auto;
-
-    @media screen and (min-width: $bp-lg) {
-      align-self: flex-end;
+    transform: translateY(-50%);
+    svg path {
+      fill: $fuchsia;
     }
   }
 }

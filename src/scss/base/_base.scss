@@ -11,28 +11,21 @@ html {
 
 body {
   margin: 0;
-  font-family: $base__font;
+  color: $white;
+  font-family: $base__font-primary;
   font-weight: fw(thin);
   line-height: $base__line-height * 1.45;
-  color: $white;
-  background: $color-primary;
+  text-align: center;
+  background-color: $white;
 }
 
-html,
-body {
+.me {
+  display: grid;
+  grid-template-rows: 144px auto 72px;
+  grid-template-areas:
+    "header header header"
+    "main main main"
+    "footer footer footer";
   height: 100%;
-  max-height: 100vh;
-}
-
-main {
-  padding: 0 0 pd(lg);
-}
-
-.route-wrapper {
-  position: relative;
-}
-
-.route-wrapper > div {
-  position: absolute;
-  width: 100%;
+  min-height: 100vh;
 }

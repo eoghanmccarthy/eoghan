@@ -7,7 +7,9 @@ import createHistory from "history/createBrowserHistory";
 
 import configureStore from "./configureStore";
 
-import App from "./app";
+import App from "app";
+
+import "../scss/main.scss";
 
 const initialState = {};
 
