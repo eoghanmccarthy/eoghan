@@ -1,4 +1,2 @@
 .sass-cache/*
-src/media/*
-dist/*
 node_modules/*
