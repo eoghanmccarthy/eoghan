@@ -14,7 +14,6 @@ module.exports = {
   resolve: {
     alias: {
       src: path.resolve(__dirname, "src/"),
-      assets: path.resolve(__dirname, "src/assets/"),
       media: path.resolve(__dirname, "src/media/"),
       app: path.resolve(__dirname, "src/js/app/"),
       actions: path.resolve(__dirname, "src/js/app/actions/"),
