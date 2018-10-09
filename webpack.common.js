@@ -1,8 +1,6 @@
 const path = require("path");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CleanWebpackPlugin = require("clean-webpack-plugin");
-const WebpackMd5Hash = require("webpack-md5-hash");
 
 module.exports = {
   entry: { main: "./src/js/index.js" },
@@ -19,7 +17,6 @@ module.exports = {
       actions: path.resolve(__dirname, "src/js/app/actions/"),
       components: path.resolve(__dirname, "src/js/app/components/"),
       containers: path.resolve(__dirname, "src/js/app/containers/"),
-      epics: path.resolve(__dirname, "src/js/app/epics/"),
       pages: path.resolve(__dirname, "src/js/app/pages/"),
       reducers: path.resolve(__dirname, "src/js/app/reducers/"),
       routes: path.resolve(__dirname, "src/js/app/routes/"),

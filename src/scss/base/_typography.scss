@@ -32,11 +32,12 @@ h2 {
 
 h3 {
   margin: 0 0 1.5em;
+  font-size: 1.6rem;
 }
 
-h3,
 p,
-ul {
+ul,
+a {
   font-size: 1.6rem;
 }
 
@@ -45,7 +46,7 @@ p {
 }
 
 a {
-  color: $white;
-  text-decoration: underline;
+  color: $black;
+  text-decoration: none;
   word-wrap: break-word;
 }
