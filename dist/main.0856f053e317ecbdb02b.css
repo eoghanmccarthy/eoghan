@@ -56,19 +56,20 @@ h2 {
   font-size: 3.2rem; }
 
 h3 {
-  margin: 0 0 1.5em; }
+  margin: 0 0 1.5em;
+  font-size: 1.6rem; }
 
-h3,
 p,
-ul {
+ul,
+a {
   font-size: 1.6rem; }
 
 p {
   color: #000; }
 
 a {
-  color: #fff;
-  text-decoration: underline;
+  color: #000;
+  text-decoration: none;
   word-wrap: break-word; }
 
 .audioplayer {
@@ -602,10 +603,13 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   width: 100%; }
 
 
-/*# sourceMappingURL=main.d45a8bcfc021914d3364.css.map*/
+/*# sourceMappingURL=main.0856f053e317ecbdb02b.css.map*/
