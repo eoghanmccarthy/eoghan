@@ -2,16 +2,8 @@
 
 .me__page {
   grid-area: main;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   padding: 30px;
-  .page__title {
-    margin: 0 0 3em;
-    h1 mark,
-    h2 mark {
-      background-color: yellow;
-    }
-    h3 mark {
-      color: $white;
-      background-color: $dark-grey;
-    }
-  }
 }

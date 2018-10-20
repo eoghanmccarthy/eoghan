@@ -1,0 +1,16 @@
+/// Logo
+
+.logo {
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: auto;
+  transform: translateY(-50%);
+  svg path {
+    fill: $fuchsia;
+  }
+  .page__index & {
+    width: 100px;
+    height: auto;
+  }
+}
