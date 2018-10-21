@@ -1,16 +1,17 @@
 /// Logo
 
 .logo {
-  position: absolute;
-  top: 50%;
-  width: 100px;
-  height: auto;
-  transform: translateY(-50%);
+  display: flex;
+  align-self: center;
   svg path {
     fill: $fuchsia;
   }
   .page__index & {
-    width: 100px;
-    height: auto;
+    svg {
+      width: auto;
+      max-width: 90vw;
+      height: 70vh;
+      opacity: 0.5;
+    }
   }
 }

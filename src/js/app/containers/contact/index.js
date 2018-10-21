@@ -21,7 +21,7 @@ export default class Contact extends Component {
     const { isVisible } = this.state;
 
     return (
-      <div className={"me__contact"}>
+      <div className={"contact"}>
         <Button onClick={this._toggleVisibility} />
         {isVisible && <Modal toggleVisibility={this._toggleVisibility} />}
       </div>
