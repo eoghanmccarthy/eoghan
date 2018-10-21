@@ -1,5 +1,27 @@
 /// Contact
 
 .contact {
-  align-self: flex-end;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: $z-modal;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: $modal-background;
+  overflow: hidden;
+
+  mark {
+    padding: 5px 10px;
+    border-radius: 3px;
+    a {
+      line-height: 1;
+    }
+  }
 }

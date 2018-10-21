@@ -5,6 +5,7 @@ import Background from "media/images/img_0243-folio.jpg";
 
 import Header from "containers/header";
 import Footer from "containers/footer";
+import Contact from "containers/contact";
 import Home from "pages/home";
 
 export default () => (
@@ -14,6 +15,7 @@ export default () => (
       <Route exact path="/" render={() => <Home />} />
       <Route render={() => <Home />} />
     </Switch>
+    <Contact />
     <Footer />
   </div>
 );

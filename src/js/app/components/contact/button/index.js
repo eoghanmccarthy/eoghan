@@ -2,7 +2,10 @@ import React from "react";
 
 const Button = ({ buttonClass, onClick }) => {
   return (
-    <div className={`btn ${buttonClass ? buttonClass : ""}`} onClick={onClick}>
+    <div
+      className={`btn btn__toggle-contact ${buttonClass ? buttonClass : ""}`}
+      onClick={onClick}
+    >
       <div className="bars">
         <span />
         <span />

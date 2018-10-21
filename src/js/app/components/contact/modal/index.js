@@ -1,9 +1,19 @@
 import React, { Component } from "react";
 
+import Button from "components/contact/button";
+
 export default class Modal extends Component {
   render() {
     const { toggleVisibility } = this.props;
 
-    return <div className={"contact__modal"} />;
+    return (
+      <div className={"contact"}>
+        <h1>front-end developer & graphic designer</h1>
+        <mark>
+          <a href="mailto:me@eoghan.io">me@eoghan.io</a>
+        </mark>
+        <Button onClick={toggleVisibility} />
+      </div>
+    );
   }
 }

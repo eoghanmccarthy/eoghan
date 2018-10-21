@@ -57,5 +57,8 @@ $padding: (
   xl: $base__padding * 3,
   xxl: $base__padding * 4
 );
+// Z Index
+$z-modal: 100;
+$z-nav-item: 1000;
 // Transitions
 $transition-speed: 0.3s;

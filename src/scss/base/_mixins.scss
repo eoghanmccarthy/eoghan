@@ -1,20 +1,12 @@
 /// Mixins
 
 @mixin breakpoint($breakpoint) {
-    $value: map-get($breakpoints, $breakpoint);
-    @media screen and (min-width: $value) {
-        @content;
-    }
+  $value: map-get($breakpoints, $breakpoint);
+  @media screen and (min-width: $value) {
+    @content;
+  }
 }
 
-@mixin btn-colours($map) {
-    @each $name, $values in $map {
-        &-#{$name} {
-            background-color: nth($values, 1);
-
-            &:hover {
-                background-color: nth($values, 2);
-            }
-        }
-    }
+@mixin rotate($args...) {
+  transform: rotate($args);
 }

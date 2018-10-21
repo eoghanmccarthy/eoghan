@@ -3,6 +3,7 @@
 .me__header {
   grid-area: header;
   display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
   align-items: center;
-  justify-content: center;
 }

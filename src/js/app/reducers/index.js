@@ -1,9 +1,9 @@
 import { combineReducers } from "redux";
 
-import skills from "reducers/skills";
+import contact from "reducers/contact";
 
 const rootReducer = combineReducers({
-  skills
+  contact
 });
 
 export default rootReducer;
