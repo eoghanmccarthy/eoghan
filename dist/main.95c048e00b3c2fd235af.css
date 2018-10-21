@@ -346,13 +346,18 @@ a {
 .logo svg path {
   fill: #ff00ff; }
 
-.me__header .logo {
+.contact .logo {
   position: absolute;
-  top: 20px;
-  right: 20px; }
-  .me__header .logo svg {
-    height: 120px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); }
+  .contact .logo svg {
+    max-width: 100vw;
+    height: 80vh;
     opacity: 0.1; }
+    .contact .logo svg path {
+      fill: grey; }
 
 .btn {
   -webkit-transition: all 0.3s ease-out;
@@ -525,4 +530,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.f6339a31462209bed8d8.css.map*/
+/*# sourceMappingURL=main.95c048e00b3c2fd235af.css.map*/

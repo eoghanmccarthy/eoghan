@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 
+import Logo from "components/logo";
 import Button from "components/contact/button";
 
 export default class Modal extends Component {
@@ -8,6 +9,7 @@ export default class Modal extends Component {
 
     return (
       <div className={"contact"}>
+        <Logo />
         <h1>front-end developer & graphic designer</h1>
         <mark>
           <a href="mailto:me@eoghan.io">me@eoghan.io</a>
