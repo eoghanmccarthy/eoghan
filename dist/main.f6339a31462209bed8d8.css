@@ -359,40 +359,49 @@ a {
   transition: all 0.3s ease-out;
   cursor: pointer; }
   .btn.btn__toggle-contact {
-    display: table;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     width: 50px;
     height: 50px;
-    border-radius: 50%; }
+    border-radius: 50%;
+    opacity: 1; }
+    .btn.btn__toggle-contact:hover {
+      opacity: 0.6; }
+    .btn.btn__toggle-contact span {
+      -webkit-transform: skew(15deg, 15deg);
+              transform: skew(15deg, 15deg);
+      display: block;
+      width: 50%;
+      height: 2px;
+      background-color: grey; }
+      .btn.btn__toggle-contact span:nth-child(2) {
+        margin-top: 4px; }
   .me > .btn.btn__toggle-contact {
     position: absolute;
     bottom: 20px;
     right: 20px;
     background-color: yellow; }
+    .me > .btn.btn__toggle-contact span {
+      background-color: grey; }
   .contact > .btn.btn__toggle-contact {
     position: relative;
-    margin-top: 50px;
     background-color: grey;
-    opacity: 0.5; }
+    opacity: 0.6; }
     .contact > .btn.btn__toggle-contact:hover {
       opacity: 1; }
-    .contact > .btn.btn__toggle-contact .bars {
-      display: table-cell;
-      vertical-align: middle; }
-      .contact > .btn.btn__toggle-contact .bars span {
-        display: block;
-        width: 36%;
-        height: 2px;
-        margin: 0 auto;
-        background-color: #fff; }
-        .contact > .btn.btn__toggle-contact .bars span:first-child {
-          -webkit-transform: rotate(45deg);
-                  transform: rotate(45deg); }
-        .contact > .btn.btn__toggle-contact .bars span:nth-child(2) {
-          margin-top: -2px;
-          -webkit-transform: rotate(-45deg);
-                  transform: rotate(-45deg); }
-        .contact > .btn.btn__toggle-contact .bars span:last-child {
-          display: none; }
+    .contact > .btn.btn__toggle-contact span {
+      background-color: #fff; }
 
 .skills {
   display: inline-grid;
@@ -460,8 +469,11 @@ a {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden; }
+  .contact h1 {
+    margin: 0; }
   .contact mark {
     padding: 5px 10px;
+    margin: 50px 0;
     border-radius: 3px; }
     .contact mark a {
       line-height: 1; }
@@ -513,4 +525,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.1ee16116d476ab83b164.css.map*/
+/*# sourceMappingURL=main.f6339a31462209bed8d8.css.map*/

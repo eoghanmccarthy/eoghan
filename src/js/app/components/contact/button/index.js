@@ -6,11 +6,8 @@ const Button = ({ buttonClass, onClick }) => {
       className={`btn btn__toggle-contact ${buttonClass ? buttonClass : ""}`}
       onClick={onClick}
     >
-      <div className="bars">
-        <span />
-        <span />
-        <span />
-      </div>
+      <span />
+      <span />
     </div>
   );
 };
