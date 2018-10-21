@@ -3,7 +3,7 @@
 .me__page {
   grid-area: main;
   display: flex;
-  padding: 30px;
+  margin: mg(lg) 0;
   &.page__index {
     align-items: center;
     justify-content: center;

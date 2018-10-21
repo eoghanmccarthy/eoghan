@@ -24,10 +24,13 @@ body {
 
 .me {
   display: grid;
-  grid-template-rows: 100px auto 100px;
+  grid-template-rows: 70px auto 70px;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
   height: 100%;
   min-height: 100vh; }
+  @media screen and (min-width: 992px) {
+    .me {
+      grid-template-rows: 100px auto 100px; } }
 
 h1,
 h2,
@@ -349,8 +352,11 @@ a {
   .page__index .logo svg {
     width: auto;
     max-width: 90vw;
-    height: 70vh;
+    height: 50vh;
     opacity: 0.5; }
+    @media screen and (min-width: 768px) {
+      .page__index .logo svg {
+        height: 70vh; } }
 
 .modal {
   display: block;
@@ -439,7 +445,7 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 30px; }
+  margin: 2rem 0; }
   .me__page.page__index {
     -webkit-box-align: center;
         -ms-flex-align: center;
@@ -471,4 +477,4 @@ a {
           flex-direction: row; }
 
 
-/*# sourceMappingURL=main.fc36acaba4f7748a77f4.css.map*/
+/*# sourceMappingURL=main.94c7a8f4a00755060ddf.css.map*/

@@ -10,8 +10,11 @@
     svg {
       width: auto;
       max-width: 90vw;
-      height: 70vh;
+      height: 50vh;
       opacity: 0.5;
+      @media screen and (min-width: bp(md)) {
+        height: 70vh;
+      }
     }
   }
 }
