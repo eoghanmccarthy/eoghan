@@ -1,11 +1,8 @@
 import React from "react";
 
-const Button = ({ buttonClass, onClick }) => {
+const Button = ({ onClick }) => {
   return (
-    <div
-      className={`btn btn__toggle-contact ${buttonClass ? buttonClass : ""}`}
-      onClick={onClick}
-    >
+    <div className={`btn btn__toggle-contact`} onClick={onClick}>
       <span />
       <span />
     </div>

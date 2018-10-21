@@ -57,6 +57,14 @@ $padding: (
   xl: $base__padding * 3,
   xxl: $base__padding * 4
 );
+// Z-Index
+$base__z-index: 10;
+
+$z-index: (
+  default: 0,
+  modal: ($base__z-index * 10),
+  top: $base__z-index * 100
+);
 // Z Index
 $z-modal: 100;
 $z-nav-item: 1000;
