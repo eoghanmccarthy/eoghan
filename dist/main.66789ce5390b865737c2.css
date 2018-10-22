@@ -402,7 +402,7 @@ a {
       background-color: grey; }
   .contact__inner > .btn.btn__toggle-contact {
     position: relative;
-    margin: 3rem 0;
+    margin: 2rem 0;
     background-color: grey;
     opacity: 0.6; }
     .contact__inner > .btn.btn__toggle-contact:hover {
@@ -451,10 +451,10 @@ a {
             align-items: center;
     z-index: 101; }
     .contact .contact__inner h1 {
-      margin: 3rem 0; }
+      margin: 2rem 0; }
     .contact .contact__inner ul {
       padding: 0;
-      margin: 3rem 0;
+      margin: 2rem 0;
       list-style-type: none; }
       .contact .contact__inner ul li {
         display: inline-block;
@@ -463,7 +463,7 @@ a {
         content: "/ "; }
     .contact .contact__inner mark {
       padding: 5px 10px;
-      margin: 3rem 0;
+      margin: 2rem 0;
       border-radius: 3px; }
       .contact .contact__inner mark a {
         line-height: 1; }
@@ -515,4 +515,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.7f9095e8177ba2309770.css.map*/
+/*# sourceMappingURL=main.66789ce5390b865737c2.css.map*/
