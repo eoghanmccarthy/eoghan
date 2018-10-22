@@ -24,13 +24,10 @@ body {
 
 .me {
   display: grid;
-  grid-template-rows: 1fr 5fr 1fr;
+  grid-template-rows: 100px auto 100px;
   grid-template-areas: "header header header" "main main main" "footer footer footer";
   height: 100%;
   min-height: 100vh; }
-  @media screen and (min-width: 768px) {
-    .me {
-      grid-template-rows: 100px auto 100px; } }
 
 h1,
 h2,
@@ -51,7 +48,10 @@ h3 {
 
 h1 {
   margin: 0 0 0.75em;
-  font-size: 4.2rem; }
+  font-size: 3.6rem; }
+  @media screen and (min-width: 768px) {
+    h1 {
+      font-size: 4.2rem; } }
 
 h2 {
   margin: 0 0 1em;
@@ -66,7 +66,8 @@ ul,
 a {
   font-size: 1.6rem; }
 
-p {
+p,
+ul {
   color: #000; }
 
 a {
@@ -399,55 +400,15 @@ a {
     background-color: yellow; }
     .me > .btn.btn__toggle-contact span {
       background-color: grey; }
-  .contact > .btn.btn__toggle-contact {
+  .contact__inner > .btn.btn__toggle-contact {
     position: relative;
+    margin: 3rem 0;
     background-color: grey;
     opacity: 0.6; }
-    .contact > .btn.btn__toggle-contact:hover {
+    .contact__inner > .btn.btn__toggle-contact:hover {
       opacity: 1; }
-    .contact > .btn.btn__toggle-contact span {
+    .contact__inner > .btn.btn__toggle-contact span {
       background-color: #fff; }
-
-.skills {
-  display: inline-grid;
-  grid-template-columns: 1fr;
-  grid-gap: 15px;
-  width: 100%;
-  padding: 3rem 0; }
-  @media screen and (min-width: 576px) {
-    .skills {
-      grid-template-columns: 1fr 1fr; } }
-  @media screen and (min-width: 992px) {
-    .skills {
-      grid-template-columns: 1fr 1fr 1fr; } }
-  .skills .skill {
-    position: relative;
-    height: 90px;
-    font-weight: 400;
-    background-color: rgba(255, 255, 255, 0.85);
-    border-radius: 5px;
-    -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
-    -webkit-transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-    .skills .skill:hover {
-      -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
-              box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
-    .skills .skill.category__webdev {
-      border-bottom: 3px solid #1dccb2; }
-    .skills .skill.category__frontend {
-      border-bottom: 3px solid #1dccb2; }
-    .skills .skill.category__design {
-      border-bottom: 3px solid #ff00ff; }
-    .skills .skill span {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      color: #3d3d3d;
-      font-size: 1.6rem;
-      line-height: 1;
-      -webkit-transform: translate(-50%, -50%);
-              transform: translate(-50%, -50%); }
 
 .contact {
   display: -webkit-box;
@@ -474,14 +435,38 @@ a {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden; }
-  .contact h1 {
-    margin: 0; }
-  .contact mark {
-    padding: 5px 10px;
-    margin: 50px 0;
-    border-radius: 3px; }
-    .contact mark a {
-      line-height: 1; }
+  .contact .contact__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 101; }
+    .contact .contact__inner h1 {
+      margin: 3rem 0; }
+    .contact .contact__inner ul {
+      padding: 0;
+      margin: 3rem 0;
+      list-style-type: none; }
+      .contact .contact__inner ul li {
+        display: inline-block;
+        padding: 0 5px; }
+      .contact .contact__inner ul li + li::before {
+        content: "/ "; }
+    .contact .contact__inner mark {
+      padding: 5px 10px;
+      margin: 3rem 0;
+      border-radius: 3px; }
+      .contact .contact__inner mark a {
+        line-height: 1; }
 
 .me__page {
   grid-area: main;
@@ -530,4 +515,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.95c048e00b3c2fd235af.css.map*/
+/*# sourceMappingURL=main.7f9095e8177ba2309770.css.map*/

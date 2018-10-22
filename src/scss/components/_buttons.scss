@@ -40,8 +40,9 @@
       background-color: grey;
     }
   }
-  .contact > &.btn__toggle-contact {
+  .contact__inner > &.btn__toggle-contact {
     position: relative;
+    margin: mg(xl) 0;
     background-color: grey;
     opacity: 0.6;
 

@@ -1,4 +1,4 @@
-export const library = [
+const data = [
   { name: "javascript", category: "frontend" },
   { name: "html", category: "frontend" },
   { name: "css", category: "frontend" },
@@ -15,3 +15,5 @@ export const library = [
   { name: "adobe illustrator", category: "design" },
   { name: "webpack", category: "frontend" }
 ];
+
+export default data;

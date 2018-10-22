@@ -17,16 +17,41 @@
   background-color: $modal-background;
   overflow: hidden;
 
-  h1 {
-    margin: 0;
-  }
+  .contact__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: zi(modal) + 1;
 
-  mark {
-    padding: 5px 10px;
-    margin: 50px 0;
-    border-radius: 3px;
-    a {
-      line-height: 1;
+    h1 {
+      margin: mg(xl) 0;
+      //transform: skew(12deg, 0deg);
+    }
+
+    ul {
+      padding: 0;
+      margin: mg(xl) 0;
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+        padding: 0 5px;
+      }
+
+      li + li::before {
+        content: "/ ";
+      }
+
+    }
+
+    mark {
+      padding: 5px 10px;
+      margin: mg(xl) 0;
+      border-radius: 3px;
+      a {
+        line-height: 1;
+      }
     }
   }
 }
