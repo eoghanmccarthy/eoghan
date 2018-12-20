@@ -3,11 +3,18 @@
     "outDir": "./dist/",
     "sourceMap": true,
     "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
     "module": "commonjs",
     "target": "es5",
-    "jsx": "react"
-  },
-  "include": [
-    "./src/**/*"
-  ]
+    "jsx": "react",
+    "baseUrl": ".",
+    "paths": {
+      "media/*": ["src/media/*"],
+      "app/*": ["src/js/app/*"],
+      "components/*": ["src/js/app/components/*"],
+      "containers/*": ["src/js/app/containers/*"],
+      "pages/*": ["src/js/app/pages/*"],
+      "routes/*": ["src/js/app/routes/*"]
+    }
+  }
 }

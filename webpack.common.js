@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/",
     filename: "[name].[chunkhash].js"
   },
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   resolve: {
     alias: {
       src: path.resolve(__dirname, "src/"),
