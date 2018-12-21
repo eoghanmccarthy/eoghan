@@ -1,5 +1,5 @@
 import React from "react";
 
-const Header = () => <header className="me__header" />;
+const Header: React.FunctionComponent<{}> = () => <header className="me__header" />;
 
 export default Header;
