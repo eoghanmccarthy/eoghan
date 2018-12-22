@@ -25,6 +25,6 @@ const Logo: React.FunctionComponent<{}> = () => {
       </svg>
     </div>
   );
-}
+};
 
 export default Logo;

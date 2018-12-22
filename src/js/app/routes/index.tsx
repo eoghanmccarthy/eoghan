@@ -3,9 +3,9 @@ import { Switch, Route } from "react-router-dom";
 
 import Background from "media/images/img_0359-folio.jpg";
 
-import Header from "containers/header";
-import Footer from "containers/footer";
-import Contact from "containers/contact";
+import Header from "components/header";
+import Footer from "components/footer";
+import Contact from "components/contact";
 import Home from "pages/home";
 
 export default () => (

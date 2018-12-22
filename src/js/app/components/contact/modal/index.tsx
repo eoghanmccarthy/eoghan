@@ -7,7 +7,9 @@ import Button from "components/contact/button";
 
 //<ul>{skills.map((item,index) => (<li key={index}>{item.name}</li>))}</ul>
 
-const Modal: React.FunctionComponent<{toggleVisibility: () => void}> = ({toggleVisibility}) => (
+const Modal: React.FunctionComponent<{ toggleVisibility: () => void }> = ({
+  toggleVisibility
+}) => (
   <div className={"contact"}>
     <Logo />
     <div className={"contact__inner"}>

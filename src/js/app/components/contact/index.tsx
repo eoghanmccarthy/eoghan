@@ -7,7 +7,7 @@ const Contact: React.FunctionComponent<{}> = () => {
   const [isVisible, toggleVisibility] = useState(false);
 
   const _toggleVisibility = () => {
-    toggleVisibility(!isVisible)
+    toggleVisibility(!isVisible);
   };
 
   return (
@@ -16,6 +16,6 @@ const Contact: React.FunctionComponent<{}> = () => {
       {isVisible && <Modal toggleVisibility={_toggleVisibility} />}
     </Fragment>
   );
-}
+};
 
-export default Contact
+export default Contact;
