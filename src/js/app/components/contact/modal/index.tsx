@@ -1,7 +1,7 @@
 import React from "react";
 
 import Logo from "components/logo";
-import Button from "components/contact/button";
+import ToggleButton from "components/contact/toggleButton";
 
 // import skills from "config/skills";
 
@@ -17,7 +17,7 @@ const Modal: React.FunctionComponent<{ toggleVisibility: () => void }> = ({
       <mark>
         <a href="mailto:me@eoghan.io">me@eoghan.io</a>
       </mark>
-      <Button onClick={toggleVisibility} />
+      <ToggleButton onClick={toggleVisibility} />
     </div>
   </div>
 );

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import Button from "components/contact/button";
+import ToggleButton from "components/contact/toggleButton";
 import Modal from "components/contact/modal";
 
 const Contact: React.FunctionComponent<{}> = () => {
@@ -12,7 +12,7 @@ const Contact: React.FunctionComponent<{}> = () => {
 
   return (
     <Fragment>
-      <Button onClick={_toggleVisibility} />
+      <ToggleButton onClick={_toggleVisibility} />
       {isVisible && <Modal toggleVisibility={_toggleVisibility} />}
     </Fragment>
   );

@@ -1,6 +1,8 @@
 import React from "react";
 
-const Button: React.FunctionComponent<{ onClick: () => void }> = ({
+import Button from "components/button";
+
+const ToggleButton: React.FunctionComponent<{ onClick: () => void }> = ({
   onClick
 }) => {
   return (
@@ -11,4 +13,4 @@ const Button: React.FunctionComponent<{ onClick: () => void }> = ({
   );
 };
 
-export default Button;
+export default ToggleButton;
