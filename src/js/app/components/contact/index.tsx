@@ -19,6 +19,11 @@ const Contact: React.FunctionComponent<{}> = () => {
         from={{ opacity: 0 }}
         enter={{ opacity: 1 }}
         leave={{ opacity: 0 }}
+        config={{
+          tension: 220,
+          friction: 20,
+          clamp: true
+        }}
       >
         {isVisible =>
           isVisible &&
