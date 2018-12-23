@@ -7,10 +7,11 @@ import ToggleButton from "components/contact/toggleButton";
 
 //<ul>{skills.map((item,index) => (<li key={index}>{item.name}</li>))}</ul>
 
-const Modal: React.FunctionComponent<{ toggleVisibility: () => void }> = ({
-  toggleVisibility
-}) => (
-  <div className={"contact"}>
+const Modal: React.FunctionComponent<{
+  styles?: object;
+  toggleVisibility: () => void;
+}> = ({ styles, toggleVisibility }) => (
+  <div style={styles} className={"contact"}>
     <Logo />
     <div className={"contact__inner"}>
       <h1>front-end developer & graphic designer</h1>
