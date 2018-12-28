@@ -28,7 +28,11 @@ const Contact: React.FunctionComponent<{}> = () => {
         {isVisible =>
           isVisible &&
           (props => (
-            <Modal styles={props} toggleVisibility={_toggleVisibility} />
+            <Modal
+              styles={props}
+              isVisible={isVisible}
+              toggleVisibility={_toggleVisibility}
+            />
           ))
         }
       </Transition>
