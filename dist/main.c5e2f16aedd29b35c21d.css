@@ -198,6 +198,12 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
+    .contact .contact__inner .text__highlight {
+      text-decoration: underline;
+      -webkit-text-decoration-color: #00ffff;
+              text-decoration-color: #00ffff;
+      -webkit-text-decoration-style: wavy;
+              text-decoration-style: wavy; }
     .contact .contact__inner h1 {
       margin: 0; }
     .contact .contact__inner mark {
@@ -210,8 +216,8 @@ a {
       width: 80px;
       height: auto; }
       .contact .contact__inner .logo svg path {
-        fill: #525252;
-        opacity: 0.5; }
+        fill: #333;
+        opacity: 0.4; }
 
 .me__page {
   grid-area: main;
@@ -260,4 +266,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.381255b12efb1d5171dc.css.map*/
+/*# sourceMappingURL=main.c5e2f16aedd29b35c21d.css.map*/
