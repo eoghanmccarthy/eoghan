@@ -9,7 +9,7 @@ module.exports = {
     publicPath: "/",
     filename: "[name].[chunkhash].js"
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
     alias: {
       src: path.resolve(__dirname, "src/"),
@@ -25,7 +25,7 @@ module.exports = {
       types: path.resolve(__dirname, "src/js/app/types/"),
       config: path.resolve(__dirname, "src/js/app/config/")
     },
-    extensions: [".ts", ".tsx", ".js",".jsx"]
+    extensions: [".ts", ".tsx", ".js", ".jsx"]
   },
   module: {
     rules: [
@@ -64,7 +64,7 @@ module.exports = {
           {
             loader: "file-loader",
             options: {
-              outputPath: "./assets/media/"
+              outputPath: "./assets/"
             }
           }
         ]
