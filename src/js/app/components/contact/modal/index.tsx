@@ -22,7 +22,10 @@ const Modal: React.FunctionComponent<{
     >
       {() => props => (
         <animated.div style={props} className={"contact__inner"}>
-          <h1>front-end developer & graphic designer</h1>
+          <h1>
+            <span className={"text__highlight"}>front-end developer</span>&ensp;&&ensp;
+            <span className={"text__highlight"}>graphic designer</span>
+          </h1>
           <mark>
             <a href="mailto:me@eoghan.io">me@eoghan.io</a>
           </mark>

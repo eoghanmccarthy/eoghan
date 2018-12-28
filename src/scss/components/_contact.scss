@@ -23,6 +23,12 @@
     justify-content: center;
     align-items: center;
 
+    .text__highlight {
+      text-decoration: underline;
+      text-decoration-color: $cyan;
+      text-decoration-style: wavy;
+    }
+
     h1 {
       margin: 0;
     }
@@ -42,8 +48,8 @@
         height: auto;
 
         path {
-          fill: palette(grey, light);
-          opacity: 0.5;
+          fill: palette(grey);
+          opacity: 0.4;
         }
       }
     }
