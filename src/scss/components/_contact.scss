@@ -22,35 +22,28 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: zi(modal) + 1;
 
     h1 {
-      margin: mg(lg) 0;
-      //transform: skew(12deg, 0deg);
-    }
-
-    ul {
-      padding: 0;
-      margin: mg(lg) 0;
-      list-style-type: none;
-
-      li {
-        display: inline-block;
-        padding: 0 5px;
-      }
-
-      li + li::before {
-        content: "/ ";
-      }
-
+      margin: 0;
     }
 
     mark {
       padding: 5px 10px;
-      margin: mg(lg) 0;
+      margin: mg(xxl) 0;
       border-radius: 3px;
       a {
         line-height: 1;
+      }
+    }
+
+    .logo {
+      svg {
+        width: 80px;
+        height: auto;
+
+        path {
+          fill: palette(grey, light);
+        }
       }
     }
   }

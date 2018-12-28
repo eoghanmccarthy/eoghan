@@ -1,13 +1,12 @@
 import React from "react";
 import { Transition, animated } from "react-spring";
 
-import ToggleButton from "components/contact/toggleButton";
+import Logo from "components/logo";
 
 const Modal: React.FunctionComponent<{
   styles?: object;
   isVisible: boolean;
-  toggleVisibility: () => void;
-}> = ({ styles, isVisible, toggleVisibility }) => (
+}> = ({ styles, isVisible }) => (
   <div style={styles} className={"contact"}>
     <Transition
       native
@@ -27,7 +26,7 @@ const Modal: React.FunctionComponent<{
           <mark>
             <a href="mailto:me@eoghan.io">me@eoghan.io</a>
           </mark>
-          <ToggleButton onClick={toggleVisibility} />
+          <Logo />
         </animated.div>
       )}
     </Transition>
