@@ -26,14 +26,7 @@ const Contact: React.FunctionComponent<{}> = () => {
         }}
       >
         {isVisible =>
-          isVisible &&
-          (props => (
-            <Modal
-              styles={props}
-              isVisible={isVisible}
-              toggleVisibility={_toggleVisibility}
-            />
-          ))
+          isVisible && (props => <Modal styles={props} isVisible={isVisible} />)
         }
       </Transition>
     </Fragment>

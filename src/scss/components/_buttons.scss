@@ -32,27 +32,13 @@
     }
   }
   .me > &.btn__toggle-contact {
-    position: absolute;
+    position: fixed;
     bottom: 20px;
     right: 20px;
     background-color: yellow;
 
     span {
       background-color: grey;
-    }
-  }
-  .contact__inner > &.btn__toggle-contact {
-    position: relative;
-    margin: mg(lg) 0;
-    background-color: grey;
-    opacity: 0.6;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    span {
-      background-color: $white;
     }
   }
 }
