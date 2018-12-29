@@ -8,7 +8,6 @@ const contact = (state = initialState, action) => {
   switch (action.type) {
     case TOGGLE_CONTACT_VISIBILITY:
       return {
-        ...state,
         isVisible: !state.isVisible
       };
 

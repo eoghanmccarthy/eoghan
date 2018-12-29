@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
-import { Transition } from "react-spring";
 
+import ModalOverlay from "components/modalOverlay";
 import ToggleButton from "components/contact/toggleButton";
 import Modal from "components/contact/modal";
 
@@ -14,21 +14,9 @@ const Contact: React.FunctionComponent<{}> = () => {
   return (
     <Fragment>
       <ToggleButton onClick={_toggleVisibility} />
-      <Transition
-        items={isVisible}
-        from={{ opacity: 0 }}
-        enter={{ opacity: 1 }}
-        leave={{ opacity: 0 }}
-        config={{
-          tension: 220,
-          friction: 20,
-          clamp: true
-        }}
-      >
-        {isVisible =>
-          isVisible && (props => <Modal styles={props} isVisible={isVisible} />)
-        }
-      </Transition>
+      <ModalOverlay isVisible={isVisible}>
+        <Modal isVisible={isVisible} />
+      </ModalOverlay>
     </Fragment>
   );
 };

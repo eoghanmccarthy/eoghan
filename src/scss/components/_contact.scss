@@ -1,6 +1,6 @@
 /// Contact
 
-.contact {
+.modal-overlay {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +26,7 @@
     .text__highlight {
       text-decoration: underline;
       text-decoration-color: $cyan;
-      text-decoration-style: wavy;
+      text-decoration-style: solid;
     }
 
     h1 {

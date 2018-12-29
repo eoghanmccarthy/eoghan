@@ -4,23 +4,23 @@ import { Transition, animated } from "react-spring";
 import Logo from "components/logo";
 
 const Modal: React.FunctionComponent<{
-  styles?: object;
   isVisible: boolean;
-}> = ({ styles, isVisible }) => (
-  <div style={styles} className={"contact"}>
-    <Transition
-      native
-      items={isVisible}
-      from={{ transform: "translateY(75px)" }}
-      enter={{ transform: "translateY(0)" }}
-      leave={{ transform: "translateY(75px)" }}
-      config={{
-        tension: 98,
-        friction: 22,
-        clamp: true
-      }}
-    >
-      {() => props => (
+}> = ({ isVisible }) => (
+  <Transition
+    native
+    items={isVisible}
+    from={{ transform: "translateY(75px)" }}
+    enter={{ transform: "translateY(0)" }}
+    leave={{ transform: "translateY(75px)" }}
+    config={{
+      tension: 98,
+      friction: 22,
+      clamp: true
+    }}
+  >
+    {isVisible =>
+      isVisible &&
+      (props => (
         <animated.div style={props} className={"contact__inner"}>
           <h1>
             <span className={"text__highlight"}>front-end developer</span>&ensp;&&ensp;
@@ -31,9 +31,9 @@ const Modal: React.FunctionComponent<{
           </mark>
           <Logo />
         </animated.div>
-      )}
-    </Transition>
-  </div>
+      ))
+    }
+  </Transition>
 );
 
 export default Modal;
