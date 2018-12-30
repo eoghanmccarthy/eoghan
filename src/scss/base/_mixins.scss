@@ -10,3 +10,17 @@
 @mixin rotate($args...) {
   transform: rotate($args);
 }
+
+@mixin clearfix() {
+  &::after {
+    display: block;
+    content: "";
+    clear: both;
+  }
+}
+
+@mixin set-pointer() {
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+}

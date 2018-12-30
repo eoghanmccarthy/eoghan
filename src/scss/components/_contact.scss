@@ -37,3 +37,30 @@
     }
   }
 }
+
+.btn__toggle-contact {
+  z-index: zi(top);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  span {
+    transform: skew(15deg, 15deg);
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: grey;
+
+    &:nth-child(2) {
+      margin-top: 4px;
+    }
+  }
+}

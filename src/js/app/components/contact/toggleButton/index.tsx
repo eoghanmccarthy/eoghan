@@ -6,10 +6,10 @@ const ToggleButton: React.FunctionComponent<{
   onClick: () => void;
 }> = ({ onClick }) => {
   return (
-    <div className={`btn btn__toggle-contact`} onClick={onClick}>
+    <Button addClass={`btn__round btn__toggle-contact`} onClick={onClick}>
       <span />
       <span />
-    </div>
+    </Button>
   );
 };
 

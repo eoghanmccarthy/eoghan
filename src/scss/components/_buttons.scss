@@ -1,44 +1,22 @@
 /// Buttons
 
 .btn {
-  transition: all 0.3s ease-out;
-  cursor: pointer;
+  @include set-pointer();
+  position: relative;
+  overflow: hidden;
+  transition: all $transition-speed ease;
 
-  &.btn__toggle-contact {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: zi(top);
-    width: 50px;
-    height: 50px;
+  border-width: 0;
+  padding: 0;
+  background-color: $transparent;
+  outline: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  &__round {
     border-radius: 50%;
-    opacity: 1;
-
-    &:hover {
-      opacity: 0.6;
-    }
-
-    span {
-      transform: skew(15deg, 15deg);
-      display: block;
-      width: 50%;
-      height: 2px;
-      background-color: grey;
-
-      &:nth-child(2) {
-        margin-top: 4px;
-      }
-    }
-  }
-  .me > &.btn__toggle-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: yellow;
-
-    span {
-      background-color: grey;
-    }
   }
 }
