@@ -159,7 +159,7 @@ a {
     .me > .btn.btn__toggle-contact span {
       background-color: grey; }
 
-.contact {
+.modal-overlay {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -184,7 +184,7 @@ a {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden; }
-  .contact .contact__inner {
+  .modal-overlay .contact__inner {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -198,24 +198,24 @@ a {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center; }
-    .contact .contact__inner .text__highlight {
+    .modal-overlay .contact__inner .text__highlight {
       text-decoration: underline;
       -webkit-text-decoration-color: #00ffff;
               text-decoration-color: #00ffff;
-      -webkit-text-decoration-style: wavy;
-              text-decoration-style: wavy; }
-    .contact .contact__inner h1 {
+      -webkit-text-decoration-style: solid;
+              text-decoration-style: solid; }
+    .modal-overlay .contact__inner h1 {
       margin: 0; }
-    .contact .contact__inner mark {
+    .modal-overlay .contact__inner mark {
       padding: 5px 10px;
       margin: 4rem 0;
       border-radius: 3px; }
-      .contact .contact__inner mark a {
+      .modal-overlay .contact__inner mark a {
         line-height: 1; }
-    .contact .contact__inner .logo svg {
+    .modal-overlay .contact__inner .logo svg {
       width: 80px;
       height: auto; }
-      .contact .contact__inner .logo svg path {
+      .modal-overlay .contact__inner .logo svg path {
         fill: #333;
         opacity: 0.4; }
 
@@ -266,4 +266,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.c5e2f16aedd29b35c21d.css.map*/
+/*# sourceMappingURL=main.2f4ada36f28e15b3ce6b.css.map*/
