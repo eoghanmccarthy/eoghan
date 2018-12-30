@@ -11,7 +11,7 @@
     "paths": {
       "media/*": ["src/media/*"],
       "app/*": ["src/js/app/*"],
-      "actionss/*": ["src/js/app/actions/*"],
+      "actions/*": ["src/js/app/actions/*"],
       "components/*": ["src/js/app/components/*"],
       "containers/*": ["src/js/app/containers/*"],
       "pages/*": ["src/js/app/pages/*"],

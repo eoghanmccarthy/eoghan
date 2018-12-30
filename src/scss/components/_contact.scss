@@ -1,56 +1,38 @@
 /// Contact
 
-.modal-overlay {
+.contact {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: zi(modal);
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  padding: 20px;
-  background-color: $modal-background;
-  overflow: hidden;
 
-  .contact__inner {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  .text__highlight {
+    text-decoration: underline;
+    text-decoration-color: $cyan;
+    text-decoration-style: solid;
+  }
 
-    .text__highlight {
-      text-decoration: underline;
-      text-decoration-color: $cyan;
-      text-decoration-style: solid;
+  h1 {
+    margin: 0;
+  }
+
+  mark {
+    padding: 5px 10px;
+    margin: mg(xxl) 0;
+    border-radius: 3px;
+    a {
+      line-height: 1;
     }
+  }
 
-    h1 {
-      margin: 0;
-    }
+  .logo {
+    svg {
+      width: 80px;
+      height: auto;
 
-    mark {
-      padding: 5px 10px;
-      margin: mg(xxl) 0;
-      border-radius: 3px;
-      a {
-        line-height: 1;
-      }
-    }
-
-    .logo {
-      svg {
-        width: 80px;
-        height: auto;
-
-        path {
-          fill: palette(grey);
-          opacity: 0.4;
-        }
+      path {
+        fill: palette(grey);
+        opacity: 0.4;
       }
     }
   }

@@ -21,7 +21,7 @@ const Modal: React.FunctionComponent<{
     {isVisible =>
       isVisible &&
       (props => (
-        <animated.div style={props} className={"contact__inner"}>
+        <animated.div style={props} className={"contact"}>
           <h1>
             <span className={"text__highlight"}>front-end developer</span>&ensp;&&ensp;
             <span className={"text__highlight"}>graphic designer</span>
