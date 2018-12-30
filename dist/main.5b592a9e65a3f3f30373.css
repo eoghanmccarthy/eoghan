@@ -3,32 +3,6 @@
 html {
   font-size: 62.5%; }
 
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-html {
-  -webkit-text-size-adjust: 100%;
-     -moz-text-size-adjust: 100%;
-      -ms-text-size-adjust: 100%;
-          text-size-adjust: 100%; }
-
-body {
-  margin: 0;
-  color: #fff;
-  font-family: "Roboto Mono", sans-serif;
-  font-weight: 100;
-  line-height: 1.45;
-  text-align: center;
-  background-color: #fff; }
-
-.me {
-  display: grid;
-  grid-template-rows: 100px auto 100px;
-  grid-template-areas: "header" "main" "footer";
-  height: 100%;
-  min-height: 100vh; }
-
 h1,
 h2,
 h3,
@@ -75,6 +49,32 @@ a {
   text-decoration: none;
   word-wrap: break-word; }
 
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+     -moz-text-size-adjust: 100%;
+      -ms-text-size-adjust: 100%;
+          text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  color: #fff;
+  font-family: "Roboto Mono", sans-serif;
+  font-weight: 100;
+  line-height: 1.45;
+  text-align: center;
+  background-color: #fff; }
+
+.me {
+  display: grid;
+  grid-template-rows: 100px auto 100px;
+  grid-template-areas: "header" "main" "footer";
+  height: 100%;
+  min-height: 100vh; }
+
 .audioplayer {
   padding: 2rem;
   width: 100%;
@@ -111,53 +111,98 @@ a {
 .track-active {
   background-color: #333; }
 
+.btn {
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  outline: none;
+  position: relative;
+  overflow: hidden;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  border-width: 0;
+  padding: 0;
+  background-color: rgba(0, 0, 0, 0);
+  outline: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .btn__round {
+    border-radius: 50%; }
+
+.contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center; }
+  .contact .text__highlight {
+    text-decoration: underline;
+    -webkit-text-decoration-color: #00ffff;
+            text-decoration-color: #00ffff;
+    -webkit-text-decoration-style: solid;
+            text-decoration-style: solid; }
+  .contact h1 {
+    margin: 0; }
+  .contact mark {
+    padding: 5px 10px;
+    margin: 4rem 0;
+    border-radius: 3px; }
+    .contact mark a {
+      line-height: 1; }
+  .contact .logo svg {
+    width: 80px;
+    height: auto; }
+    .contact .logo svg path {
+      fill: #333;
+      opacity: 0.4; }
+
+.btn__toggle-contact {
+  z-index: 1000;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  opacity: 1; }
+  .btn__toggle-contact:hover {
+    opacity: 0.6; }
+  .btn__toggle-contact span {
+    -webkit-transform: skew(15deg, 15deg);
+            transform: skew(15deg, 15deg);
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: grey; }
+    .btn__toggle-contact span:nth-child(2) {
+      margin-top: 4px; }
+
 .logo svg {
   width: auto; }
 
 .logo svg path {
   fill: #ff00ff; }
-
-.btn {
-  -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;
-  cursor: pointer; }
-  .btn.btn__toggle-contact {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    z-index: 1000;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    opacity: 1; }
-    .btn.btn__toggle-contact:hover {
-      opacity: 0.6; }
-    .btn.btn__toggle-contact span {
-      -webkit-transform: skew(15deg, 15deg);
-              transform: skew(15deg, 15deg);
-      display: block;
-      width: 50%;
-      height: 2px;
-      background-color: grey; }
-      .btn.btn__toggle-contact span:nth-child(2) {
-        margin-top: 4px; }
-  .me > .btn.btn__toggle-contact {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: yellow; }
-    .me > .btn.btn__toggle-contact span {
-      background-color: grey; }
 
 .modal-overlay {
   display: -webkit-box;
@@ -184,40 +229,6 @@ a {
   padding: 20px;
   background-color: rgba(255, 255, 255, 0.8);
   overflow: hidden; }
-  .modal-overlay .contact__inner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center; }
-    .modal-overlay .contact__inner .text__highlight {
-      text-decoration: underline;
-      -webkit-text-decoration-color: #00ffff;
-              text-decoration-color: #00ffff;
-      -webkit-text-decoration-style: solid;
-              text-decoration-style: solid; }
-    .modal-overlay .contact__inner h1 {
-      margin: 0; }
-    .modal-overlay .contact__inner mark {
-      padding: 5px 10px;
-      margin: 4rem 0;
-      border-radius: 3px; }
-      .modal-overlay .contact__inner mark a {
-        line-height: 1; }
-    .modal-overlay .contact__inner .logo svg {
-      width: 80px;
-      height: auto; }
-      .modal-overlay .contact__inner .logo svg path {
-        fill: #333;
-        opacity: 0.4; }
 
 .me__page {
   grid-area: main;
@@ -266,4 +277,4 @@ a {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.2f4ada36f28e15b3ce6b.css.map*/
+/*# sourceMappingURL=main.5b592a9e65a3f3f30373.css.map*/
