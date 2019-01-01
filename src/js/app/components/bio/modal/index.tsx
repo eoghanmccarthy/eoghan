@@ -31,7 +31,7 @@ const Modal: React.FunctionComponent<{
             </div>
             <div className={"header__title"}>
               <h1>
-                <mark>front-end developer&ensp;&&ensp;graphic designer</mark>
+                <mark>&ensp;front-end developer & graphic designer</mark>
               </h1>
             </div>
           </div>
@@ -43,7 +43,14 @@ const Modal: React.FunctionComponent<{
               {skills
                 .sort((a: any, b: any) => a.name - b.name)
                 .map((item: { name: string }, index: number) => (
-                  <li key={index}>{item.name}&ensp;/&ensp;</li>
+                  <li key={index}>
+                    {item.name}
+                    {index !== skills.length - 1
+                      ? `${String.fromCharCode(8194)}/${String.fromCharCode(
+                          8194
+                        )}`
+                      : ""}
+                  </li>
                 ))}
             </ul>
           </div>

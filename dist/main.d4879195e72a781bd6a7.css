@@ -171,11 +171,13 @@ body {
           -ms-flex-align: start;
               align-items: flex-start;
       width: 200px; }
-      .bio .bio__header > div:first-child .logo svg {
-        width: 120px;
-        height: auto; }
-        .bio .bio__header > div:first-child .logo svg path {
-          fill: #333; }
+      .bio .bio__header > div:first-child .logo {
+        margin: 0 20px 20px 0; }
+        .bio .bio__header > div:first-child .logo svg {
+          width: 120px;
+          height: auto; }
+          .bio .bio__header > div:first-child .logo svg path {
+            fill: #333; }
     .bio .bio__header > div:last-child {
       -webkit-box-flex: 1;
           -ms-flex: 1;
@@ -340,4 +342,4 @@ body {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.6dfce92e9e77a01b5523.css.map*/
+/*# sourceMappingURL=main.d4879195e72a781bd6a7.css.map*/

@@ -1,6 +1,5 @@
 /// Colours
 
-// Descriptive colours
 $white: #fff;
 $black: #000;
 $light-grey: #e2e1e0;
@@ -21,31 +20,6 @@ $modal-background: rgba(255, 255, 255, 0.8);
 
 // Brand colours
 $color-primary: $dark-grey;
-$colour__body-background: linear-gradient(-180deg, $vivid-cyan, $transparent);
-
-// UI colours map
-$ui-colours: (
-  default: (
-    rgba(0, 0, 0, 0),
-    rgba(0, 0, 0, 0.2)
-  ),
-  blue: (
-    $blue,
-    darken($blue, 12%)
-  ),
-  green: (
-    $green,
-    darken($green, 4%)
-  ),
-  red: (
-    $red,
-    darken($red, 12%)
-  ),
-  light-grey: (
-    $light-grey,
-    darken($light-grey, 12%)
-  )
-);
 
 // Colour palettes
 $palettes: (
