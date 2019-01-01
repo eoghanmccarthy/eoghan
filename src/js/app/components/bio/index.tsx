@@ -1,8 +1,8 @@
 import React, { Fragment, useState } from "react";
 
 import ModalOverlay from "components/modalOverlay";
-import ToggleButton from "components/contact/toggleButton";
-import Modal from "components/contact/modal";
+import ToggleButton from "components/bio/toggleButton";
+import Modal from "components/bio/modal";
 
 const Contact: React.FunctionComponent<{}> = () => {
   const [isVisible, toggleVisibility] = useState(false);

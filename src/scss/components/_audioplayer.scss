@@ -1,0 +1,32 @@
+/// Audio Player
+
+.audioplayer {
+  padding: pd(lg);
+  width: 100%;
+  border: 1px solid $white;
+  border-radius: 6px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+
+  &-controls {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: pd(xs);
+    width: 100%;
+  }
+
+  &-track {
+    margin: mg(sm) 0;
+    padding: pd(lg);
+    width: 100%;
+    border: 1px solid $white;
+    border-radius: 4px;
+  }
+
+  .track-active {
+    background-color: $grey;
+  }
+}

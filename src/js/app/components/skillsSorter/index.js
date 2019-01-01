@@ -26,12 +26,12 @@ export default class SkillsListSorter extends Component {
     const sorter = (data, filter) => {
       let list = data.slice();
       switch (filter) {
-        case "SORT_BY_CATEGORY":
-          return list.sort((a, b) => b.category - a.category);
         case "SORT_BY_NAME_AZ":
           return list.sort((a, b) => a.name - b.name);
         case "SORT_BY_NAME_ZA":
           return list.sort((a, b) => b.name - a.name);
+        case "SORT_BY_CATEGORY":
+          return list.sort((a, b) => b.category - a.category);
         default:
           return list;
       }

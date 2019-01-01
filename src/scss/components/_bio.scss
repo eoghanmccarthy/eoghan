@@ -1,0 +1,130 @@
+/// Bio
+
+.bio {
+  display: grid;
+  grid-template-rows: repeat(3, minmax(100px, auto));
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+
+  .bio__header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    padding: mg(lg) 0;
+    border-bottom: 1px solid grey;
+    @media screen and (min-width: bp(lg)) {
+      flex-direction: row;
+    }
+
+    > div:first-child {
+      display: flex;
+      align-items: flex-start;
+      width: 200px;
+
+      .logo {
+        svg {
+          width: 120px;
+          height: auto;
+
+          path {
+            fill: palette(grey);
+          }
+        }
+      }
+    }
+
+    > div:last-child {
+      flex: 1;
+
+      h1 {
+        text-align: left;
+        transform-origin: bottom left;
+        transform: skewX(-8deg);
+        mark {
+          background-color: $cyan;
+        }
+      }
+    }
+  }
+
+  .bio__main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: mg(lg) 0;
+
+    mark {
+      padding: 5px 10px;
+      margin: mg(xxl) 0;
+      border-radius: 3px;
+      a {
+        line-height: 1;
+      }
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      li {
+        display: inline-block;
+      }
+    }
+  }
+
+  .bio__footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: mg(lg) 0;
+
+    .links {
+      a {
+        display: block;
+        line-height: 0;
+
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.btn__toggle-contact {
+  z-index: zi(top);
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: yellow;
+  opacity: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  span {
+    transform: skew(15deg, 15deg);
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: grey;
+
+    &:nth-child(2) {
+      margin-top: 4px;
+    }
+  }
+}
