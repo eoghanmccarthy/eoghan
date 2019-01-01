@@ -42,7 +42,8 @@
       flex: 1;
 
       h1 {
-        padding-right: 30px;
+        width: calc(100% - 30px);
+        //padding-right: 30px;
         text-align: left;
         transform-origin: bottom left;
         transform: skewX(-8deg);

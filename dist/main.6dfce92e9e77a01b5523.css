@@ -181,7 +181,7 @@ body {
           -ms-flex: 1;
               flex: 1; }
       .bio .bio__header > div:last-child h1 {
-        padding-right: 30px;
+        width: calc(100% - 30px);
         text-align: left;
         -webkit-transform-origin: bottom left;
                 transform-origin: bottom left;
@@ -340,4 +340,4 @@ body {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.635d75537dc345b3f709.css.map*/
+/*# sourceMappingURL=main.6dfce92e9e77a01b5523.css.map*/
