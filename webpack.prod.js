@@ -3,6 +3,7 @@ const merge = require("webpack-merge");
 const CleanWebpackPlugin = require("clean-webpack-plugin");
 const CopyWebpackPlugin = require("copy-webpack-plugin");
 const UglifyJSPlugin = require("uglifyjs-webpack-plugin");
+const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const common = require("./webpack.common.js");
 
 module.exports = merge(common, {
@@ -18,6 +19,7 @@ module.exports = merge(common, {
         warnings: false,
         mangle: true
       }
-    })
+    }),
+    new OptimizeCSSAssetsPlugin({})
   ]
 });

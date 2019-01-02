@@ -2,10 +2,9 @@
 
 $white: #fff;
 $black: #000;
-$light-grey: #e2e1e0;
+$transparent: rgba(0, 0, 0, 0);
+
 $grey: #333;
-$dark-grey: #3d3d3d;
-$darker-grey: #212121;
 $fuchsia: #ff00ff;
 $cyan: #00ffff;
 $vivid-cyan: #1dccb2;
@@ -14,12 +13,11 @@ $green: #00bb5d;
 $yellow: #ffff00;
 $pure-orange: #ff8000;
 $blue: #1e90ff;
-$transparent: rgba(0, 0, 0, 0);
 
 $modal-background: rgba(255, 255, 255, 0.8);
 
 // Brand colours
-$color-primary: $dark-grey;
+$color-primary: $cyan;
 
 // Colour palettes
 $palettes: (

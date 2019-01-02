@@ -10,7 +10,6 @@
   width: 100%;
   max-width: 1200px;
   height: auto;
-  overflow: auto;
 
   .bio__header {
     grid-area: header;
@@ -66,7 +65,7 @@
 
     mark {
       padding: 5px 10px;
-      margin: mg(xxl) 0;
+      margin: mg(xl) 0;
       border-radius: 3px;
       a {
         line-height: 1;
@@ -74,7 +73,7 @@
     }
 
     ul {
-      margin: 0;
+      margin: mg(xl) 0;
       padding: 0;
       list-style-type: none;
 

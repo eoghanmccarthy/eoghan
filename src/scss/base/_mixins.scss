@@ -7,10 +7,6 @@
   }
 }
 
-@mixin rotate($args...) {
-  transform: rotate($args);
-}
-
 @mixin clearfix() {
   &::after {
     display: block;
