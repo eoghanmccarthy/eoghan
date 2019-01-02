@@ -11,8 +11,7 @@ const data = [
   { name: "react-select", category: "frontend" },
   { name: "rx-js", category: "frontend" },
   { name: "redux-persist", category: "frontend" },
-  { name: "sass", category: "frontend" },
-  { name: "adobe illustrator", category: "design" }
+  { name: "sass", category: "frontend" }
 ];
 
 export default data;

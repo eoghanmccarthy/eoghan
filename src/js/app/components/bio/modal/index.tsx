@@ -3,8 +3,7 @@ import { Transition, animated } from "react-spring";
 
 import Logo from "components/logo";
 import Links from "components/bio/links";
-
-import skills from "app/config/skills";
+import SkillsList from "components/skills/list";
 
 const Modal: React.FunctionComponent<{
   isVisible: boolean;
@@ -39,20 +38,7 @@ const Modal: React.FunctionComponent<{
             <mark>
               <a href="mailto:me@eoghan.io">me@eoghan.io</a>
             </mark>
-            <ul>
-              {skills
-                .sort((a: any, b: any) => a.name - b.name)
-                .map((item: { name: string }, index: number) => (
-                  <li key={index}>
-                    {item.name}
-                    {index !== skills.length - 1
-                      ? `${String.fromCharCode(8194)}/${String.fromCharCode(
-                          8194
-                        )}`
-                      : ""}
-                  </li>
-                ))}
-            </ul>
+            <SkillsList />
           </div>
           <div className={"bio__footer"}>
             <Links />

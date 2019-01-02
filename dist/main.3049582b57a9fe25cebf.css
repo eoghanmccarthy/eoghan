@@ -145,7 +145,8 @@ body {
   grid-template-areas: "header" "main" "footer";
   width: 100%;
   max-width: 1200px;
-  height: auto; }
+  height: auto;
+  overflow: auto; }
   .bio .bio__header {
     grid-area: header;
     display: -webkit-box;
@@ -292,8 +293,10 @@ body {
   width: 100%;
   height: 100%;
   padding: 20px;
-  background-color: rgba(255, 255, 255, 0.8);
-  overflow: auto; }
+  background-color: rgba(255, 255, 255, 0.8); }
+  @media screen and (min-width: 992px) {
+    .modal-overlay {
+      padding: 30px; } }
 
 .me__page {
   grid-area: main;
@@ -342,4 +345,4 @@ body {
           align-items: center; }
 
 
-/*# sourceMappingURL=main.d4879195e72a781bd6a7.css.map*/
+/*# sourceMappingURL=main.3049582b57a9fe25cebf.css.map*/
