@@ -1,7 +1,7 @@
 import React from "react";
 import { Switch, Route } from "react-router-dom";
 
-import Background from "media/images/img_0359-folio.jpg";
+import Background from "assets/images/img_0359-folio.jpg";
 
 import Header from "components/header";
 import Footer from "components/footer";

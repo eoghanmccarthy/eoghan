@@ -9,7 +9,7 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "media/*": ["src/media/*"],
+      "assets/*": ["src/assets/*"],
       "app/*": ["src/js/app/*"],
       "actions/*": ["src/js/app/actions/*"],
       "components/*": ["src/js/app/components/*"],

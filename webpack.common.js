@@ -13,7 +13,7 @@ module.exports = {
   resolve: {
     alias: {
       src: path.resolve(__dirname, "src/"),
-      media: path.resolve(__dirname, "src/media/"),
+      assets: path.resolve(__dirname, "src/assets/"),
       app: path.resolve(__dirname, "src/js/app/"),
       actions: path.resolve(__dirname, "src/js/app/actions/"),
       components: path.resolve(__dirname, "src/js/app/components/"),

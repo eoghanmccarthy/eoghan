@@ -1,6 +1,6 @@
 import React from "react";
 
-import GitHub from "media/logos/GitHub-Mark-120px-plus.png";
+import GitHub from "assets/logos/GitHub-Mark-120px-plus.png";
 
 const Links: React.FunctionComponent<{}> = () => (
   <div className={"links"}>
