@@ -1,5 +1,4 @@
 const data = [
-  { name: "html", category: "frontend" },
   { name: "css", category: "frontend" },
   { name: "javascript", category: "frontend" },
   { name: "typescript", category: "frontend" },
