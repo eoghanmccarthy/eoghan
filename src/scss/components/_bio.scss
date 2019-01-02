@@ -10,7 +10,10 @@
   width: 100%;
   max-width: 1200px;
   height: auto;
-  //overflow: auto;
+  margin: 20px 0;
+  @media screen and (min-width: bp(lg)) {
+    margin: 30px 0;
+  }
 
   .bio__header {
     grid-area: header;
