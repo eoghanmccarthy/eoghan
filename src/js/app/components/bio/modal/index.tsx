@@ -29,9 +29,7 @@ const Modal: React.FunctionComponent<{
               <Logo />
             </div>
             <div className={"header__title"}>
-              <h1>
-                <mark>&ensp;front-end developer & graphic designer</mark>
-              </h1>
+              <h1>&ensp;front-end developer & graphic designer</h1>
             </div>
           </div>
           <div className={"bio__main"}>
