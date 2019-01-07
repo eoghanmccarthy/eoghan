@@ -2,9 +2,9 @@
 
 $white: #fff;
 $black: #000;
+$grey: #333;
 $transparent: rgba(0, 0, 0, 0);
 
-$grey: #333;
 $fuchsia: #ff00ff;
 $cyan: #00ffff;
 $yellow: #ffff00;
@@ -12,7 +12,7 @@ $yellow: #ffff00;
 $modal-background: rgba(255, 255, 255, 0.8);
 
 // Brand colours
-$color-primary: $fuchsia;
+$color__primary: $fuchsia;
 
 // Colour palettes
 $palettes: (
@@ -24,10 +24,10 @@ $palettes: (
     x-dark: darken($grey, 16%)
   ),
   brand: (
-    x-light: lighten($color-primary, 25%),
-    light: lighten($color-primary, 12%),
-    base: $color-primary,
-    dark: darken($color-primary, 8%),
-    x-dark: darken($color-primary, 16%)
+    x-light: lighten($color__primary, 25%),
+    light: lighten($color__primary, 12%),
+    base: $color__primary,
+    dark: darken($color__primary, 8%),
+    x-dark: darken($color__primary, 16%)
   )
 );
