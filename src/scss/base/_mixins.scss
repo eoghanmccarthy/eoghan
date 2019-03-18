@@ -20,3 +20,33 @@
   user-select: none;
   outline: none;
 }
+
+@mixin background-image($url: "", $size: contain) {
+  background-image: url($url);
+  background-size: $size;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+@mixin scrolling($axis: null) {
+  @if ($axis == null) {
+    overflow: auto;
+  }
+
+  @if ($axis == x) {
+    overflow-x: auto;
+  }
+
+  @if ($axis == y) {
+    overflow-y: auto;
+  }
+
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+  &::-webkit-scrollbar-track {
+    background: $transparent;
+  }
+}

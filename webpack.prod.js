@@ -12,6 +12,13 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin("dist", {}),
     new CopyWebpackPlugin(["./src/public"]),
+    new CopyWebpackPlugin([
+      {
+        from: "src/data/config.json",
+        to: "data/config",
+        toType: "file"
+      }
+    ]),
     new UglifyJSPlugin({
       sourceMap: true,
       uglifyOptions: {
