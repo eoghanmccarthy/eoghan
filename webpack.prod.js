@@ -15,7 +15,7 @@ module.exports = merge(common, {
     new CopyWebpackPlugin([
       {
         from: "src/data/config.json",
-        to: "data/config",
+        to: "data/test",
         toType: "file"
       }
     ]),
