@@ -14,9 +14,9 @@ module.exports = merge(common, {
     new CopyWebpackPlugin(["./src/public"]),
     new CopyWebpackPlugin([
       {
-        from: "src/data/",
-        to: "data/",
-        toType: "dir"
+        from: "src/data/config.json",
+        to: "data/config",
+        toType: "file"
       }
     ]),
     new UglifyJSPlugin({
