@@ -1,11 +1,9 @@
 /// Logo
 
-.logo {
-  svg {
-    width: auto;
-  }
+svg.logo {
+  width: auto;
 
-  svg path {
+  path {
     fill: $fuchsia;
   }
 }

@@ -1,6 +1,6 @@
 import React, { Fragment, useState } from "react";
 
-import ModalOverlay from "components/modalOverlay";
+import { ContentOverlay } from "eoghandotio-ui";
 import ToggleButton from "components/bio/toggleButton";
 import Modal from "components/bio/modal";
 
@@ -14,9 +14,9 @@ const Contact: React.FunctionComponent<{}> = () => {
   return (
     <Fragment>
       <ToggleButton onClick={_toggleVisibility} />
-      <ModalOverlay isVisible={isVisible}>
+      <ContentOverlay isVisible={isVisible}>
         <Modal isVisible={isVisible} />
-      </ModalOverlay>
+      </ContentOverlay>
     </Fragment>
   );
 };

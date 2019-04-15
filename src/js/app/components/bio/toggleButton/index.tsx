@@ -1,12 +1,12 @@
 import React from "react";
 
-import Button from "components/button";
+import { Button } from "eoghandotio-ui";
 
 const ToggleButton: React.FunctionComponent<{
   onClick: () => void;
 }> = ({ onClick }) => {
   return (
-    <Button addClass={`btn__round btn__toggle-contact`} onClick={onClick}>
+    <Button className={`btn__round btn__toggle-contact`} onClick={onClick}>
       <span />
       <span />
     </Button>

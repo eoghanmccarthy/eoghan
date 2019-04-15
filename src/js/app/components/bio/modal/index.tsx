@@ -1,7 +1,7 @@
 import React from "react";
 import { Transition, animated } from "react-spring";
 
-import Logo from "components/logo";
+import { Logo } from "eoghandotio-ui";
 import Links from "components/bio/links";
 import SkillsList from "components/skills/list";
 
@@ -23,7 +23,7 @@ const Modal: React.FunctionComponent<{
     {isVisible =>
       isVisible &&
       (props => (
-        <animated.div style={props} className={"bio"}>
+        <animated.div id={"bio"} style={props} className={"bio"}>
           <div className={"bio__header"}>
             <div className={"header__logo"}>
               <Logo />
