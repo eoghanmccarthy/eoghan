@@ -1,13 +1,13 @@
-import { createStore, applyMiddleware, compose } from "redux";
-import { persistStore, persistReducer } from "redux-persist";
-import storage from "redux-persist/lib/storage";
+import { createStore, applyMiddleware, compose } from 'redux';
+import { persistStore, persistReducer } from 'redux-persist';
+import storage from 'redux-persist/lib/storage';
 
-import { createEpicMiddleware } from "redux-observable";
+import { createEpicMiddleware } from 'redux-observable';
 
-import rootReducer from "reducers/index";
+import rootReducer from 'app/rootReducer';
 
 const persistConfig = {
-  key: "root",
+  key: 'root',
   storage
 };
 
@@ -24,8 +24,7 @@ export default (initialState = {}, history) => {
 
   const enhancers = [applyMiddleware(...middlewares)];
 
-  const composeEnhancers =
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
   const store = createStore(persistedReducer, composeEnhancers(...enhancers));
 
