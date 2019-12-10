@@ -1,11 +1,48 @@
 import React, { Fragment, useState } from "react";
-import { ContentOverlay } from "eoghandotio-ui";
+import { Formik, Form,Field } from 'formik';
 
-const Contact: React.FunctionComponent<{}> = () => {
+const PaceCalculator: React.FunctionComponent<{}> = () => {
 
   return (
-    <div><span>hhh</span></div>
+    <div>
+      <h1>My Form</h1>
+      <Formik
+        initialValues={{
+          timeHr: null,
+          timeMin: null,
+          timeSec: null,
+          distanceVal: null,
+          distanceMetric: 'km',
+          paceHr: null,
+          paceMin: null,
+          paceSec: null,
+          paceMetric: 'km',
+        }}
+        onSubmit={(values, actions) => {
+
+        }}
+        children={({ dirty, isSubmitting }) => (
+          <Form>
+            <Field type="text" name="timeHr" />
+            <Field type="text" name="timeMin" />
+            <Field type="text" name="timeSec" />
+            <Field type="text" name="distanceVal" />
+            <Field as="select" name="distanceMetric">
+              <option value="km">Kilometres</option>
+              <option value="mi">Miles</option>
+            </Field>
+            <Field type="text" name="paceHr" />
+            <Field type="text" name="paceMin" />
+            <Field type="text" name="paceSec" />
+            <Field as="select" name="paceMetric">
+              <option value="km">Kilometres</option>
+              <option value="mi">Miles</option>
+            </Field>
+          </Form>
+        )}
+      />
+  </div>
   );
 };
 
-export default Contact;
+export default PaceCalculator;
