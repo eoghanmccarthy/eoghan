@@ -8,14 +8,14 @@ const PaceCalculator: React.FunctionComponent<{}> = () => {
       <h1>My Form</h1>
       <Formik
         initialValues={{
-          timeHr: null,
-          timeMin: null,
-          timeSec: null,
-          distanceVal: null,
+          timeHr: '',
+          timeMin: '',
+          timeSec: '',
+          distanceVal: '',
           distanceMetric: 'km',
-          paceHr: null,
-          paceMin: null,
-          paceSec: null,
+          paceHr: '',
+          paceMin: '',
+          paceSec: '',
           paceMetric: 'km',
         }}
         onSubmit={(values, actions) => {
