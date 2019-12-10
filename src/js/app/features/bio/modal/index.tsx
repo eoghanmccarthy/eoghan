@@ -1,9 +1,9 @@
 import React from "react";
 import { Transition, animated } from "react-spring";
-
 import { Logo } from "eoghandotio-ui";
-import Links from "components/bio/links";
-import SkillsList from "components/skills/list";
+
+import Links from "../links";
+import SkillsList from "../skills/list";
 
 const Modal: React.FunctionComponent<{
   isVisible: boolean;

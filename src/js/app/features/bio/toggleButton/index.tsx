@@ -1,5 +1,4 @@
 import React from "react";
-
 import { Button } from "eoghandotio-ui";
 
 const ToggleButton: React.FunctionComponent<{

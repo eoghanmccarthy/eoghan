@@ -1,8 +1,8 @@
 import React from "react";
 
-import SkillSorter from "components/skills/sorter";
+import SkillSorter from "../sorter";
 
-import skillsData from "app/config/skills";
+import skillsData from "../data";
 
 const List: React.FunctionComponent<{}> = () => (
   <ul>
