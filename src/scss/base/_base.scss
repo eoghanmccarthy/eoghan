@@ -1,5 +1,3 @@
-/// Base
-
 * {
   box-sizing: border-box;
 }
@@ -16,7 +14,7 @@ body {
   font-weight: fw(thin);
   line-height: $base__line-height * 1.45;
   text-align: center;
-  background-color: $white;
+  background: linear-gradient(.25turn, #ff1458, #ff1458);
 }
 
 .me {

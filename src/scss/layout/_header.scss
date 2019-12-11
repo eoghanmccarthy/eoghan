@@ -2,10 +2,10 @@
   grid-area: header;
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
+  padding: pd(lg);
   svg.logo {
     width: 120px;
     height: auto;
-    margin: -10px 0 0 20px;
   }
 }

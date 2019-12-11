@@ -13,7 +13,7 @@ const Bio: React.FunctionComponent<{}> = () => {
           </div>
         </div>
         <div className={"bio__main"}>
-          <mark>
+          <mark className={'contact-link'}>
             <a href="mailto:me@eoghan.io">me@eoghan.io</a>
           </mark>
           <Skills />

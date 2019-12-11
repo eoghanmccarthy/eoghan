@@ -15,7 +15,7 @@ const data = [
 ];
 
 const List: React.FunctionComponent<{}> = () => (
-  <ul>
+  <ul className={'skills-list'}>
     {data.map((item: { name: string }, index: number) => (
       <li key={index}>
         {item.name}
