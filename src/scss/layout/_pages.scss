@@ -1,13 +1,9 @@
 .me {
-  background-color: deeppink;
+  background: linear-gradient(.25turn, #ff1458, #ff1458);
 }
 
 .me__page {
   grid-area: main;
   display: flex;
   margin: mg(lg) 0;
-  &.page__index {
-    align-items: center;
-    justify-content: center;
-  }
 }

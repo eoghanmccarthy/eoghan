@@ -1,5 +1,4 @@
 import React from "react";
-import { Logo } from "eoghandotio-ui";
 
 import Skills from "app/features/bio/skills";
 import GitHub from "assets/logos/GitHub-Mark-120px-plus.png";
@@ -9,11 +8,8 @@ const Bio: React.FunctionComponent<{}> = () => {
   return (
       <div id={"bio"}  className={"bio"}>
         <div className={"bio__header"}>
-          <div className={"header__logo"}>
-            <Logo />
-          </div>
           <div className={"header__title"}>
-            <h1>&ensp;front-end developer & graphic designer</h1>
+            <h1>&ensp;<mark>front-end developer</mark> & graphic designer</h1>
           </div>
         </div>
         <div className={"bio__main"}>
