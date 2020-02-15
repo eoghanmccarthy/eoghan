@@ -1,6 +1,8 @@
 import React from "react";
 
-const Footer: React.FunctionComponent<{}> = () => (
+import './footer.scss';
+
+const Footer = () => (
   <footer className="me__footer" />
 );
 
