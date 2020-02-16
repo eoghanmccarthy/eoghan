@@ -10,7 +10,11 @@ const Home = () => {
 
   return (
     <Fragment>
-      <Dialog isVisible={showDialog} closeDialog={() => toggleDialog(!showDialog)}>
+      <Dialog
+        isVisible={showDialog}
+        closeDialog={() => toggleDialog(!showDialog)}
+        //onClick={() => toggleDialog(!showDialog)}
+      >
         <Bio />
       </Dialog>
       <main className={'me__page page__index'}>

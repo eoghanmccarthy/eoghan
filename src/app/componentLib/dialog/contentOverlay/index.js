@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import { createPortal } from 'react-dom';
+import { func } from 'prop-types';
 import { useTransition, animated } from 'react-spring';
 import cx from 'classnames';
 import './styles.scss';
@@ -8,7 +9,7 @@ const rootNode = document.getElementById('root');
 
 const n = () => null;
 
-const ContentOverlay = ({ isVisible, onDestroy }) => {
+const ContentOverlay = ({ isVisible, onDestroy = n }) => {
   const transition = useTransition(isVisible, null, {
     from: { backgroundColor: 'rgba(0,0,0,0)' },
     enter: { backgroundColor: 'rgba(0,0,0,.25)' },
@@ -33,3 +34,7 @@ const ContentOverlay = ({ isVisible, onDestroy }) => {
 };
 
 export default ContentOverlay;
+
+ContentOverlay.propTypes = {
+  onDestroy: func
+};
