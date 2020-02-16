@@ -16,11 +16,9 @@ const Bio: React.FunctionComponent<{}> = () => {
           <Skills />
         </div>
         <div className={"bio__footer"}>
-          <div className={"links"}>
-            <a href={"https://github.com/eoghanmccarthy"} target={"_blank"}>
-              <img src={GitHub} />
-            </a>
-          </div>
+          <a href={"https://github.com/eoghanmccarthy"} target={"_blank"}>
+            <img src={GitHub} />
+          </a>
         </div>
       </div>
   );
@@ -35,14 +33,15 @@ const data = [
   { name: "react-native", category: "frontend" },
   { name: "rx-js", category: "frontend" },
   { name: "css", category: "frontend" },
+  { name: "sass", category: "frontend" },
 ];
 
 const Skills: React.FunctionComponent<{}> = () => (
-  <ul className={'skills-list'}>
+  <ul id={'skills'}>
     {data.map((item: { name: string }, index: number) => (
-        <li key={index}>
+      <li key={index}>
         {item.name}
-        </li>
+      </li>
     ))}
   </ul>
 );
