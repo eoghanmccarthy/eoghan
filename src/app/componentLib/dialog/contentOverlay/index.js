@@ -11,7 +11,7 @@ const n = () => null;
 const ContentOverlay = ({ isVisible, onDestroy }) => {
   const transition = useTransition(isVisible, null, {
     from: { backgroundColor: 'rgba(0,0,0,0)' },
-    enter: { backgroundColor: 'rgba(0,0,0,.4)' },
+    enter: { backgroundColor: 'rgba(0,0,0,.25)' },
     leave: { backgroundColor: 'rgba(0,0,0,0)' },
     config: (item, state) =>
       state === 'leave'

@@ -13,6 +13,16 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 54px;
+  height: 54px;
+  background-color: blue;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  outline: none;
   span {
     transform: skew(15deg, 15deg);
     display: block;

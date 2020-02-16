@@ -15,22 +15,7 @@ const Home = () => {
       </Dialog>
       <main className={'me__page page__index'}>
         <GestureLogo />
-        <button
-          className={'btn toggle-bio'}
-          style={{
-            position: 'absolute',
-            right: '30px',
-            bottom: '30px',
-            width: '54px',
-            height: '54px',
-            backgroundColor: 'blue',
-            border: 'none',
-            borderRadius: '100%',
-            cursor: 'pointer',
-            outline: 'none'
-          }}
-          onClick={() => toggleDialog(!showDialog)}
-        >
+        <button className={'btn toggle-bio'} onClick={() => toggleDialog(!showDialog)}>
           <span />
           <span />
         </button>

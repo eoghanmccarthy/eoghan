@@ -40,10 +40,9 @@ const data = [
 const Skills: React.FunctionComponent<{}> = () => (
   <ul className={'skills-list'}>
     {data.map((item: { name: string }, index: number) => (
-      <li key={index}>
+        <li key={index}>
         {item.name}
-        {index !== data.length - 1 ? `${String.fromCharCode(8194)}/${String.fromCharCode(8194)}` : ""}
-      </li>
+        </li>
     ))}
   </ul>
 );
