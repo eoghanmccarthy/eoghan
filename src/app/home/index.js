@@ -12,6 +12,7 @@ const Home = () => {
   return (
     <Fragment>
       <Dialog
+        id={'bio-dialog'}
         isVisible={showDialog}
         closeDialog={() => toggleDialog(!showDialog)}
         //onClick={() => toggleDialog(!showDialog)}

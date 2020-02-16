@@ -19,7 +19,7 @@ const DialogBackground = ({ children, closeDialog }) => {
   });
 
   return (
-    <div ref={ref} id={'dialog-background'} className={'dialog-background'} onClick={closeDialog}>
+    <div ref={ref} className={'dialog-background'} onClick={closeDialog}>
       {children}
     </div>
   );

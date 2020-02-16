@@ -1,31 +1,30 @@
-/// Functions
+@mixin breakpoint($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
 
-// Breakpoint
 @function bp($value) {
   @return map-get($breakpoints, $value);
 }
 
-// Z-index
 @function zi($value) {
   @return map-get($z-index, $value);
 }
 
-// Margin
 @function mg($value) {
   @return map-get($margin, $value);
 }
 
-// Padding
 @function pd($value) {
   @return map-get($padding, $value);
 }
 
-// Color palette
 @function palette($color, $shade: "base") {
   @return map-get(map-get($palettes, $color), $shade);
 }
 
-// Font weight
 @function fw($value: "normal") {
   @return map-get($font-weight, $value);
 }

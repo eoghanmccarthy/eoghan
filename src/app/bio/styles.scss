@@ -1,4 +1,4 @@
-.bio {
+#bio {
   display: grid;
   grid-template-rows: auto;
   grid-template-areas:
@@ -14,11 +14,11 @@
     flex-direction: column;
     padding: 30px 0;
     border-bottom: 1px solid grey;
+    transform: skewX(-8deg);
     h1 {
       width: calc(100% - 30px);
       text-align: left;
       transform-origin: bottom left;
-      transform: skewX(-8deg);
       mark {
         background-color: yellow;
       }
@@ -46,7 +46,7 @@
       text-align: left;
       > li {
         display: inline-block;
-        background-color: springgreen;
+        background-color: #80ff00;
         &:after {
           content: '/';
           padding: 0 10px;
