@@ -1,9 +1,9 @@
 .dialog {
-	overflow-y: auto;
+	overflow: auto;
 	position: relative;
 	width: 100%;
 	max-width: 720px;
-	max-height: calc(100vh - 140px);
+	//max-height: calc(100vh - 140px);
 	padding: 0 30px;
 	background: transparent;
 	border-radius: 8px;
