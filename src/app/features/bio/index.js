@@ -3,7 +3,7 @@ import { useSpring, animated } from 'react-spring';
 
 import './styles.scss';
 
-import GitHub from 'assets/GitHub-Mark-120px-plus.png';
+import { Button } from 'componentLib/button';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
@@ -23,9 +23,14 @@ const Bio = () => {
         </animated.h1>
       </div>
       <div className={'bio__main'}>
-        <mark className={'contact-link'}>
-          <a href="mailto:me@eoghan.io">me@eoghan.io</a>
-        </mark>
+        <Button
+          size={'sm'}
+          shape={'rounded'}
+          href={'mailto:me@eoghan.io'}
+          onClick={e => e.stopPropagation()}
+        >
+          me@eoghan.io
+        </Button>
         <animated.ul id={'skills'} style={{ transform: props.xy.interpolate(trans2) }}>
           {data.map((item, index) => (
             <li key={index}>{item.name || ''}</li>
@@ -33,13 +38,12 @@ const Bio = () => {
         </animated.ul>
       </div>
       <div className={'bio__footer'}>
-        <a
+        <Button
+          size={'lg'}
           href={'https://github.com/eoghanmccarthy'}
           target={'_blank'}
           onClick={e => e.stopPropagation()}
-        >
-          <img src={GitHub} />
-        </a>
+        />
       </div>
     </div>
   );

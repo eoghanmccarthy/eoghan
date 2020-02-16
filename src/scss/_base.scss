@@ -1,3 +1,28 @@
+$breakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+$color__primary: #ff1458;
+$color__secondary: #0000ff;
+
+@mixin breakpoint($breakpoint) {
+  $value: map-get($breakpoints, $breakpoint);
+  @media screen and (min-width: $value) {
+    @content;
+  }
+}
+
+@function bp($value) {
+  @return map-get($breakpoints, $value);
+}
+
+@function palette($color, $shade: "base") {
+  @return map-get(map-get($palettes, $color), $shade);
+}
+
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i&display=swap");
 
 * {
@@ -43,6 +68,8 @@ a {
 }
 
 a {
+  display: block;
+  line-height: 0;
   text-decoration: none;
   word-wrap: break-word;
   outline: none;

@@ -1,7 +1,7 @@
 $btn-size: (
-	sm: 42,
-	md: 48,
-	lg: 54,
+	sm: 32,
+	md: 44,
+	lg: 56,
 );
 
 .btn {
@@ -22,11 +22,7 @@ $btn-size: (
 	}
 	&.rounded {
 		padding: 0 15px;
-		border-radius: 5px;
-	}
-	&.capsule {
-		padding: 0 20px;
-		border-radius: 1000px;
+		border-radius: 2px;
 	}
 	&.circle {
 		padding: 0;
@@ -34,5 +30,8 @@ $btn-size: (
 	}
 	&.disabled {
 		cursor: not-allowed;
+	}
+	&:focus {
+		box-shadow: 0 0 0 3px white;
 	}
 }

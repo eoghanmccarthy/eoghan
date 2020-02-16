@@ -11,26 +11,30 @@ const Button = forwardRef(
       children,
       className,
       disabled = false,
+      href = '',
+      target,
       size = 'md',
       shape = 'circle',
-      colour = 'primary',
       ...rest
     },
     forwardedRef
   ) => {
+    const Element = href ? 'a' : 'button';
+
     return (
-      <button
+      <Element
         ref={forwardedRef}
+        {...(href && { href: href })}
+        {...(href && { target: target })}
         className={cx('btn', className, {
           disabled: disabled,
           [size]: size,
-          [shape]: shape,
-          [colour]: colour
+          [shape]: shape
         })}
         {...rest}
       >
         {children}
-      </button>
+      </Element>
     );
   }
 );
@@ -38,7 +42,8 @@ const Button = forwardRef(
 export default buttonBase(Button);
 
 Button.propTypes = {
+  href: string,
+  target: oneOf(['_blank', '_self', '_parent', '_top']),
   size: oneOf(['sm', 'md', 'lg']),
-  shape: oneOf(['rounded', 'circle', 'capsule']),
-  colour: string
+  shape: oneOf(['rounded', 'circle'])
 };
