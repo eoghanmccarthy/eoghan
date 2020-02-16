@@ -1,0 +1,38 @@
+$btn-size: (
+	sm: 42,
+	md: 48,
+	lg: 54,
+);
+
+.btn {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border: none;
+	cursor: pointer;
+	outline: none;
+	@each $name, $value in $btn-size {
+		&.#{$name} {
+			min-height: #{$value}px;
+			&.circle {
+				min-width: #{$value}px;
+			}
+		}
+	}
+	&.rounded {
+		padding: 0 15px;
+		border-radius: 5px;
+	}
+	&.capsule {
+		padding: 0 20px;
+		border-radius: 1000px;
+	}
+	&.circle {
+		padding: 0;
+		border-radius: 100%;
+	}
+	&.disabled {
+		cursor: not-allowed;
+	}
+}

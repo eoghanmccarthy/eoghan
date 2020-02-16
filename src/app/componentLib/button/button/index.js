@@ -1,13 +1,21 @@
 import React, { forwardRef } from 'react';
 import { string, oneOf } from 'prop-types';
 import cx from 'classnames';
-import { css } from '@emotion/core';
+import './styles.scss';
 
 import buttonBase from '../buttonBase';
 
 const Button = forwardRef(
   (
-    { children, className, disabled = false, colour = 'primary', shape = 'circle', ...rest },
+    {
+      children,
+      className,
+      disabled = false,
+      size = 'md',
+      shape = 'circle',
+      colour = 'primary',
+      ...rest
+    },
     forwardedRef
   ) => {
     return (
@@ -15,11 +23,10 @@ const Button = forwardRef(
         ref={forwardedRef}
         className={cx('btn', className, {
           disabled: disabled,
-          [shape]: shape
+          [size]: size,
+          [shape]: shape,
+          [colour]: colour
         })}
-        css={css`
-          background-color: ${colour};
-        `}
         {...rest}
       >
         {children}
@@ -31,6 +38,7 @@ const Button = forwardRef(
 export default buttonBase(Button);
 
 Button.propTypes = {
-  colour: string,
-  shape: oneOf(['rounded', 'circle', 'capsule'])
+  size: oneOf(['sm', 'md', 'lg']),
+  shape: oneOf(['rounded', 'circle', 'capsule']),
+  colour: string
 };
