@@ -1,7 +1,7 @@
 import React from "react";
 import './styles.scss'
 
-import GitHub from "assets/logos/GitHub-Mark-120px-plus.png";
+import GitHub from "assets/GitHub-Mark-120px-plus.png";
 
 const Bio: React.FunctionComponent<{}> = () => {
   return (

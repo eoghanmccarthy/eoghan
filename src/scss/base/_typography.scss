@@ -10,7 +10,7 @@ a {
 h1,
 h2,
 h3 {
-  color: $black;
+  color: #000;
   font-family: $base__font-primary;
   letter-spacing: -0.025em;
   line-height: 1.25;
@@ -40,12 +40,12 @@ h3 {
 
 p,
 ul {
-  color: $black;
+  color: #000;
   font-size: 2rem;
 }
 
 a {
-  color: $black;
+  color: #000;
   font-size: 2rem;
   text-decoration: none;
   word-wrap: break-word;

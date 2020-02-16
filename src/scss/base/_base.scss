@@ -9,12 +9,12 @@ html {
 
 body {
   margin: 0;
-  color: $white;
+  color: #ffffff;
   font-family: $base__font-primary;
   font-weight: fw(thin);
   line-height: $base__line-height * 1.45;
   text-align: center;
-  background: linear-gradient(.25turn, #ff1458, #ff1458);
+  background: linear-gradient(.25turn, $color__primary, $color__primary);
 }
 
 .me {

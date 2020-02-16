@@ -22,6 +22,9 @@ $base__line-height: 1;
 $base__font-primary: "Roboto Mono", sans-serif;
 $base__font-secondary: "Roboto", sans-serif;
 
+$color__primary: #ff1458;
+$color__secondary: #0000ff;
+
 $font-weight: (
   thin: 100,
   light: 300,
@@ -29,8 +32,9 @@ $font-weight: (
   medium: 500,
   bold: 700
 );
-// Margin
+
 $base__margin: 1rem;
+
 $margin: (
   xxs: $base__margin / 5,
   xs: $base__margin / 2,
@@ -40,8 +44,9 @@ $margin: (
   xl: $base__margin * 3,
   xxl: $base__margin * 4
 );
-// Padding
+
 $base__padding: 1rem;
+
 $padding: (
   xxs: $base__padding / 5,
   xs: $base__padding / 2,
@@ -53,6 +58,7 @@ $padding: (
 );
 
 $base__z-index: 10;
+
 $z-index: (
   default: 0,
   modal: ($base__z-index * 10),
