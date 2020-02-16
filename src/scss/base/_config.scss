@@ -1,6 +1,3 @@
-/// Config
-
-// Breakpoints map
 $breakpoints: (
   sm: 576px,
   md: 768px,
@@ -8,26 +5,23 @@ $breakpoints: (
   xl: 1200px
 );
 
-// Root size
 %root-size {
   font-size: 62.5%;
 }
 
-// Base font size and line height
 $base__font-size: 1rem;
 $base__line-height: 1;
 
-// Local root size
 %px-base {
   font-size: $base__font-size;
 }
-// Webfonts
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-// Font stacks
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
 $base__font-primary: "Roboto Mono", sans-serif;
 $base__font-secondary: "Roboto", sans-serif;
-// Font weight
+
 $font-weight: (
   thin: 100,
   light: 300,
@@ -57,7 +51,7 @@ $padding: (
   xl: $base__padding * 3,
   xxl: $base__padding * 4
 );
-// Z-Index
+
 $base__z-index: 10;
 $z-index: (
   default: 0,
@@ -65,5 +59,4 @@ $z-index: (
   top: $base__z-index * 100
 );
 
-// Transitions
 $transition-speed: 0.3s;
