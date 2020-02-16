@@ -7,9 +7,7 @@ const Bio: React.FunctionComponent<{}> = () => {
   return (
       <div id={"bio"}  className={"bio"}>
         <div className={"bio__header"}>
-          <div className={"header__title"}>
-            <h1>&ensp;<mark>front-end developer</mark> & graphic designer</h1>
-          </div>
+          <h1>&ensp;<mark>front-end developer</mark> & graphic designer</h1>
         </div>
         <div className={"bio__main"}>
           <mark className={'contact-link'}>
@@ -31,17 +29,12 @@ const Bio: React.FunctionComponent<{}> = () => {
 export default Bio;
 
 const data = [
-  { name: "css", category: "frontend" },
   { name: "javascript", category: "frontend" },
   { name: "typescript", category: "frontend" },
-  { name: "rx-js", category: "frontend" },
   { name: "react", category: "frontend" },
   { name: "react-native", category: "frontend" },
-  { name: "react-spring", category: "frontend" },
-  { name: "redux", category: "frontend" },
-  { name: "redux-observable", category: "frontend" },
-  { name: "webpack", category: "frontend" },
-  { name: "sass", category: "frontend" }
+  { name: "rx-js", category: "frontend" },
+  { name: "css", category: "frontend" },
 ];
 
 const Skills: React.FunctionComponent<{}> = () => (

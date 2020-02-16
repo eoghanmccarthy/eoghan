@@ -17,16 +17,13 @@
     @media screen and (min-width: bp(lg)) {
       flex-direction: row;
     }
-    > div {
-      flex: 1;
-      h1 {
-        width: calc(100% - 30px);
-        text-align: left;
-        transform-origin: bottom left;
-        transform: skewX(-8deg);
-        mark {
-          background-color: cyan;
-        }
+    h1 {
+      width: calc(100% - 30px);
+      text-align: left;
+      transform-origin: bottom left;
+      transform: skewX(-8deg);
+      mark {
+        background-color: yellow;
       }
     }
   }
