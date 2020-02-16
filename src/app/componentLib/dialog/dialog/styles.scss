@@ -1,0 +1,18 @@
+.dialog {
+	overflow-y: auto;
+	position: relative;
+	width: 100%;
+	max-width: 540px;
+	max-height: calc(100vh - 140px);
+	padding: 0 30px;
+	background: white;
+	border-radius: 8px;
+	text-align: center;
+	&:focus {
+		outline: none;
+	}
+	.button-block {
+		align-self: center;
+		margin-top: 15px;
+	}
+}

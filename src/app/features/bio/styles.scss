@@ -1,0 +1,78 @@
+.bio {
+  display: grid;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+  .bio__header {
+    grid-area: header;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 0;
+    border-bottom: 1px solid grey;
+    @media screen and (min-width: bp(lg)) {
+      flex-direction: row;
+    }
+    > div {
+      flex: 1;
+      h1 {
+        width: calc(100% - 30px);
+        text-align: left;
+        transform-origin: bottom left;
+        transform: skewX(-8deg);
+        mark {
+          background-color: cyan;
+        }
+      }
+    }
+  }
+  .bio__main {
+    grid-area: main;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px;
+    .contact-link {
+      align-self: flex-start;
+      padding: 5px 10px;
+      margin: 0 0 30px 0;
+      border-radius: 3px;
+      a {
+        line-height: 1;
+      }
+    }
+    .skills-list {
+      align-self: flex-start;
+      margin: 30px 0;
+      padding: 0;
+      list-style-type: none;
+      text-align: left;
+      > li {
+        display: inline-block;
+      }
+    }
+  }
+  .bio__footer {
+    grid-area: footer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 30px;
+    .links {
+      a {
+        display: block;
+        line-height: 0;
+        img {
+          width: 50px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+

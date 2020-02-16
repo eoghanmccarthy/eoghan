@@ -3,7 +3,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-  entry: './src/js/index.tsx',
+  entry: './src/index.tsx',
   output: {
     path: path.join(__dirname, '/dist'),
     publicPath: '/',
@@ -15,11 +15,11 @@ module.exports = {
     alias: {
       src: path.resolve(__dirname, 'src/'),
       assets: path.resolve(__dirname, 'src/assets/'),
-      app: path.resolve(__dirname, 'src/js/app/'),
-      common: path.resolve(__dirname, 'src/js/app/common/'),
-      features: path.resolve(__dirname, 'src/js/app/features/'),
-      pages: path.resolve(__dirname, 'src/js/app/pages/'),
-      routes: path.resolve(__dirname, 'src/js/app/routes/')
+      app: path.resolve(__dirname, 'src/app/'),
+      componentLib: path.resolve(__dirname, 'src/app/componentLib/'),
+      features: path.resolve(__dirname, 'src/app/features/'),
+      global: path.resolve(__dirname, 'src/app/global/'),
+      pages: path.resolve(__dirname, 'src/app/pages/')
     },
     extensions: ['.ts', '.tsx', '.js', '.jsx']
   },
