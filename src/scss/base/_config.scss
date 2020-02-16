@@ -5,30 +5,14 @@ $breakpoints: (
   xl: 1200px
 );
 
-%root-size {
-  font-size: 62.5%;
-}
-
 $base__font-size: 1rem;
-$base__line-height: 1;
 
 %px-base {
   font-size: $base__font-size;
 }
 
-@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i,300,300i&display=swap");
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
-
 $color__primary: #ff1458;
 $color__secondary: #0000ff;
-
-$font-weight: (
-  thin: 100,
-  light: 300,
-  normal: 400,
-  medium: 500,
-  bold: 700
-);
 
 $base__margin: 1rem;
 
@@ -52,14 +36,6 @@ $padding: (
   lg: $base__padding * 2,
   xl: $base__padding * 3,
   xxl: $base__padding * 4
-);
-
-$base__z-index: 10;
-
-$z-index: (
-  default: 0,
-  modal: ($base__z-index * 10),
-  top: $base__z-index * 100
 );
 
 $transition-speed: 0.3s;

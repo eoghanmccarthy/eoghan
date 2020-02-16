@@ -1,11 +1,13 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i&display=swap");
+
 * {
   box-sizing: border-box;
 }
 
 html {
-  @extend %root-size;
-  background: $color__primary;
+  font-size: 62.5%;
   text-size-adjust: 100%;
+  background: $color__primary;
 }
 
 body {
@@ -14,7 +16,7 @@ body {
   color: #000;
   font-family: "Roboto Mono", sans-serif;
   font-weight: 100;
-  line-height: $base__line-height * 1.45;
+  line-height: 1.45;
 }
 
 h1,

@@ -2,13 +2,13 @@ import React from 'react';
 import { useSpring, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
 
-function GestureLogo() {
+const Logo = () => {
   const [bind, { delta, down }] = useGesture();
   const { x, y, fill, size } = useSpring({
     x: down ? delta[0] : 0,
     y: down ? delta[1] : 0,
     fill: down ? '#0000ff' : '#0000b3',
-    size: down ? 1.2 : 1,
+    size: down ? 1.12 : 1,
     immediate: name => down && (name === 'x' || name === 'y')
   });
 
@@ -31,6 +31,6 @@ function GestureLogo() {
       />
     </animated.svg>
   );
-}
+};
 
-export default GestureLogo;
+export default Logo;

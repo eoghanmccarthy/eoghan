@@ -1,10 +1,10 @@
 import React, { Fragment, useState } from 'react';
-import './home.scss';
+import './styles.css';
 
 import { Button } from 'componentLib/button';
 import { Dialog } from 'componentLib/dialog';
 import Bio from 'app/bio';
-import GestureLogo from 'app/gestureLogo';
+import Logo from 'app/logo';
 
 const Home = () => {
   const [showDialog, toggleDialog] = useState(false);
@@ -15,12 +15,12 @@ const Home = () => {
         id={'bio-dialog'}
         isVisible={showDialog}
         closeDialog={() => toggleDialog(!showDialog)}
-        //onClick={() => toggleDialog(!showDialog)}
+        onClick={() => toggleDialog(!showDialog)}
       >
         <Bio />
       </Dialog>
       <main className={'me__page page__index'}>
-        <GestureLogo />
+        <Logo />
         <Button
           className={'toggle-bio'}
           size={'lg'}

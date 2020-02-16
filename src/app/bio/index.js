@@ -33,7 +33,11 @@ const Bio = () => {
         </animated.ul>
       </div>
       <div className={'bio__footer'}>
-        <a href={'https://github.com/eoghanmccarthy'} target={'_blank'}>
+        <a
+          href={'https://github.com/eoghanmccarthy'}
+          target={'_blank'}
+          onClick={e => e.stopPropagation()}
+        >
           <img src={GitHub} />
         </a>
       </div>

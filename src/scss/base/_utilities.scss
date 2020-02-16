@@ -9,10 +9,6 @@
   @return map-get($breakpoints, $value);
 }
 
-@function zi($value) {
-  @return map-get($z-index, $value);
-}
-
 @function mg($value) {
   @return map-get($margin, $value);
 }
@@ -23,8 +19,4 @@
 
 @function palette($color, $shade: "base") {
   @return map-get(map-get($palettes, $color), $shade);
-}
-
-@function fw($value: "normal") {
-  @return map-get($font-weight, $value);
 }
