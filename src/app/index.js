@@ -2,7 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './app.scss';
 
-import Home from 'pages/home';
+import Home from './home';
 
 const App = () => (
   <div className="me">

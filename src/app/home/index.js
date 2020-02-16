@@ -2,9 +2,8 @@ import React, { Fragment, useState } from 'react';
 import './home.scss';
 
 import { Dialog } from 'componentLib/dialog';
-import Main from 'componentLib/main';
-import Bio from 'app/features/bio';
-import GestureLogo from 'app/features/gestureLogo';
+import Bio from 'app/bio';
+import GestureLogo from 'app/gestureLogo';
 
 const Home = () => {
   const [showDialog, toggleDialog] = useState(false);
@@ -14,7 +13,7 @@ const Home = () => {
       <Dialog isVisible={showDialog} closeDialog={() => toggleDialog(!showDialog)}>
         <Bio />
       </Dialog>
-      <Main className={'page__index'}>
+      <main className={'me__page page__index'}>
         <GestureLogo />
         <button
           style={{
@@ -31,7 +30,7 @@ const Home = () => {
           }}
           onClick={() => toggleDialog(!showDialog)}
         />
-      </Main>
+      </main>
     </Fragment>
   );
 };
