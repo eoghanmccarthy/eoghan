@@ -7,3 +7,20 @@
     max-width: 500px;
   }
 }
+
+.btn.toggle-bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  span {
+    transform: skew(15deg, 15deg);
+    display: block;
+    width: 25px;
+    height: 2px;
+    background-color: grey;
+  }
+  span:nth-child(2) {
+    margin-top: 4px;
+  }
+}

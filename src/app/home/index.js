@@ -16,6 +16,7 @@ const Home = () => {
       <main className={'me__page page__index'}>
         <GestureLogo />
         <button
+          className={'btn toggle-bio'}
           style={{
             position: 'absolute',
             right: '30px',
@@ -29,7 +30,10 @@ const Home = () => {
             outline: 'none'
           }}
           onClick={() => toggleDialog(!showDialog)}
-        />
+        >
+          <span />
+          <span />
+        </button>
       </main>
     </Fragment>
   );
