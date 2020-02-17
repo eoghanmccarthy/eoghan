@@ -29,5 +29,6 @@
 }
 
 #bio-dialog {
+  max-height: 100vh;
   overflow: visible;
 }
