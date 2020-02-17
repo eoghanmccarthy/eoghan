@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import './styles.scss';
+import './styles.css';
 
 const DialogBackground = ({ children, closeDialog }) => {
   const ref = useRef(null);
