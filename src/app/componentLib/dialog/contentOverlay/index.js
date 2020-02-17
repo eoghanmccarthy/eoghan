@@ -3,7 +3,7 @@ import { createPortal } from 'react-dom';
 import { func } from 'prop-types';
 import { useTransition, animated } from 'react-spring';
 import cx from 'classnames';
-import './styles.scss';
+import './styles.css';
 
 const rootNode = document.getElementById('root');
 

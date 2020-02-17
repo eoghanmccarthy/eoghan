@@ -2,7 +2,7 @@ import React, { Fragment, forwardRef, useState, useEffect } from 'react';
 import { useTransition, animated, config } from 'react-spring';
 import FocusLock from 'react-focus-lock';
 import cx from 'classnames';
-import './styles.scss';
+import './styles.css';
 
 import dialogBase from '../dialogBase';
 import ContentOverlay from '../contentOverlay';

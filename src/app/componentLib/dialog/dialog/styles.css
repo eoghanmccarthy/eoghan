@@ -7,18 +7,20 @@
 	padding: 0 30px;
 	background: transparent;
 	border-radius: 8px;
-	text-align: center;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: none;
-	&::-webkit-scrollbar {
-		display: none;
-		width: 0;
-		background: transparent;
-	}
-	&::-webkit-scrollbar-track {
-		background: transparent;
-	}
-	&:focus {
-		outline: none;
-	}
+}
+
+.dialog::-webkit-scrollbar {
+	display: none;
+	width: 0;
+	background: transparent;
+}
+
+.dialog::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+.dialog:focus {
+	outline: none;
 }

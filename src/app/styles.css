@@ -1,3 +1,15 @@
+.me {
+	display: grid;
+	grid-template-rows: 100px auto 100px;
+	grid-template-areas:
+			"header"
+			"main"
+			"footer";
+	height: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
 .me__header {
 	grid-area: header;
 	display: flex;
