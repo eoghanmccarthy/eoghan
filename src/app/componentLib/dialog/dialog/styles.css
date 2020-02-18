@@ -1,5 +1,4 @@
 .dialog {
-	overflow-y: auto;
 	position: relative;
 	width: 100%;
 	max-width: 720px;
@@ -7,6 +6,8 @@
 	padding: 0 30px;
 	background: transparent;
 	border-radius: 8px;
+	overflow-y: auto;
+	overflow-x: hidden;
 	-webkit-overflow-scrolling: touch;
 	-ms-overflow-style: none;
 }
