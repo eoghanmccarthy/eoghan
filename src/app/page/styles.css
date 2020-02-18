@@ -13,7 +13,7 @@
   position: fixed;
   right: 30px;
   bottom: 30px;
-  background-color: blue;
+  background-color: var(--color-secondary);
 }
 
 .btn.toggle-bio span {

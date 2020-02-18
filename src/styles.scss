@@ -1,5 +1,10 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:100,100i&display=swap");
 
+:root {
+	--color-primary: #ff1458;
+	--color-secondary: #0000ff;
+}
+
 * {
 	box-sizing: border-box;
 }
@@ -11,7 +16,7 @@ body,
 }
 
 html {
-	background: #ff1458;
+	background: var(--color-primary);
 }
 
 body {
@@ -33,11 +38,15 @@ a {
 h1 {
 	margin: 0 0 0.75em;
 	font-size: 2.5rem;
-	@media screen and (min-width: 768px) {
-		font-size: 3.75rem;
-	}
 	letter-spacing: -0.025em;
 	line-height: 1.25;
+	@media (min-width: 30em) {
+		font-size: calc(2.5rem + ((1vw - 0.30rem) * 2.5));
+		/* Where: * 2.5 = 100 * font size difference / viewport width difference */
+	}
+	@media (min-width: 80em) {
+		font-size: 3.75rem;
+	}
 }
 
 ul,
