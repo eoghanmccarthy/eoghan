@@ -1,7 +1,7 @@
 import React, { Fragment, useState } from 'react';
+import { Button } from '@eoghanmccarthy/ui';
 import './styles.css';
 
-import { Button } from 'componentLib/button';
 import { Dialog } from 'componentLib/dialog';
 import Bio from 'app/features/bio';
 import Logo from 'app/features/logo';
@@ -21,7 +21,12 @@ const Home = () => {
       </Dialog>
       <main className={'me__page page__index'}>
         <Logo />
-        <Button className={'toggle-bio'} size={'lg'} onClick={() => toggleDialog(!showDialog)}>
+        <Button
+          size={'xl'}
+          shape={'circle'}
+          className={'toggle-bio'}
+          onClick={() => toggleDialog(!showDialog)}
+        >
           <span />
           <span />
         </Button>

@@ -21,6 +21,7 @@
   "dependencies": {
     "@babel/runtime": "^7.0.0-beta.54",
     "@emotion/core": "^10.0.27",
+    "@eoghanmccarthy/ui": "^1.0.60",
     "@types/classnames": "^2.2.6",
     "@types/react": "^16.7.17",
     "@types/react-dom": "^16.0.11",
@@ -28,7 +29,6 @@
     "@types/react-router-dom": "^4.3.1",
     "circular-dependency-plugin": "^5.0.2",
     "classnames": "^2.2.6",
-    "eoghandotio-ui": "^1.0.11",
     "history": "^4.7.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",

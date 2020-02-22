@@ -54,10 +54,13 @@ a {
 	font-size: 1.25rem;
 }
 
+a,
+button {
+	border-width: 0;
+}
+
 a {
-	display: block;
 	line-height: 0;
 	text-decoration: none;
 	word-wrap: break-word;
-	outline: none;
 }

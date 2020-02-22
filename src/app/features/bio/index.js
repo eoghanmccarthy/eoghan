@@ -1,8 +1,7 @@
 import React from 'react';
 import { useSpring, animated } from 'react-spring';
+import { Button } from '@eoghanmccarthy/ui';
 import './styles.scss';
-
-import { Button } from 'componentLib/button';
 
 const calc = (x, y) => [x - window.innerWidth / 2, y - window.innerHeight / 2];
 const trans1 = (x, y) => `translate3d(${x / 10}px,${y / 10}px,0)`;
@@ -23,7 +22,7 @@ const Bio = () => {
       </div>
       <div className={'bio__main'}>
         <Button
-          size={'sm'}
+          size={'xs'}
           shape={'rounded'}
           href={'mailto:me@eoghan.io'}
           onClick={e => e.stopPropagation()}
@@ -38,7 +37,7 @@ const Bio = () => {
       </div>
       <div className={'bio__footer'}>
         <Button
-          size={'lg'}
+          size={'xl'}
           href={'https://github.com/eoghanmccarthy'}
           target={'_blank'}
           onClick={e => e.stopPropagation()}
