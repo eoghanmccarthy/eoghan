@@ -3,7 +3,7 @@ import { Button, Dialog } from '@eoghanmccarthy/ui';
 import './styles.css';
 
 import Bio from 'app/features/bio';
-import Logo from 'app/features/logo';
+import AnimatedLogo from 'app/features/animatedLogo';
 
 const Home = () => {
   const [showDialog, toggleDialog] = useState(false);
@@ -16,7 +16,7 @@ const Home = () => {
         <Bio />
       </Dialog>
       <main className={'me__page page__index'}>
-        <Logo />
+        <AnimatedLogo />
         <Button size={'xl'} shape={'circle'} className={'toggle-bio'} onClick={toggle}>
           <span />
           <span />

@@ -2,7 +2,7 @@ import React from 'react';
 import { useSpring, animated, interpolate } from 'react-spring';
 import { useGesture } from 'react-with-gesture';
 
-const Logo = () => {
+const AnimatedLogo = () => {
   const [bind, { delta, down }] = useGesture();
   const { x, y, fill, size } = useSpring({
     x: down ? delta[0] : 0,
@@ -33,4 +33,4 @@ const Logo = () => {
   );
 };
 
-export default Logo;
+export default AnimatedLogo;
