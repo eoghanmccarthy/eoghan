@@ -1,33 +1,47 @@
-import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
+import * as React from "react";
+import {
+  HeadContent,
+  Scripts,
+  createRootRoute,
+  Outlet,
+} from "@tanstack/react-router";
 
-import appCss from '../styles.css?url'
+import appCss from "../styles.css?url";
 
 export const Route = createRootRoute({
   head: () => ({
     meta: [
       {
-        charSet: 'utf-8',
+        charSet: "utf-8",
       },
       {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1',
+        name: "viewport",
+        content: "width=device-width, initial-scale=1",
       },
       {
-        title: 'eoghan',
+        title: "eoghan",
       },
     ],
     links: [
       {
-        rel: 'stylesheet',
+        rel: "stylesheet",
         href: appCss,
       },
     ],
   }),
-  shellComponent: RootDocument,
-    ssr:false
-})
+  component: RootComponent,
+  ssr: true,
+});
 
-function RootDocument({ children }: { children: React.ReactNode }) {
+function RootComponent() {
+  return (
+    <RootDocument>
+      <Outlet />
+    </RootDocument>
+  );
+}
+
+function RootDocument({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="en">
       <head>
@@ -38,5 +52,5 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }
