@@ -3,7 +3,6 @@ import {
   HeadContent,
   Scripts,
   createRootRoute,
-  Outlet,
 } from "@tanstack/react-router";
 
 import appCss from "../styles.css?url";
@@ -29,17 +28,9 @@ export const Route = createRootRoute({
       },
     ],
   }),
-  component: RootComponent,
+  shellComponent: RootDocument,
   ssr: true,
 });
-
-function RootComponent() {
-  return (
-    <RootDocument>
-      <Outlet />
-    </RootDocument>
-  );
-}
 
 function RootDocument({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
